@@ -1,0 +1,24 @@
+sass:
+  load_paths:
+      - _sass
+      - ../node_modules
+
+include:
+  - _pages
+
+collections:
+  docs_api:
+    output: true
+    permalink: /api/:path.html
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+    
+
+plugins:
+  - jekyll-octicons
