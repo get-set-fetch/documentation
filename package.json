@@ -1,0 +1,17 @@
+{
+  "name": "get-set-fetch-documentation",
+  "version": "0.1.0",
+  "description": "get-set-fetch-documentation",
+  "scripts": {
+    "build:api-docs": "jsdoc node_modules/get-set-fetch/lib/ -r -c jsdoc/jsdoc-config.json -d jekyll/_docs_api -t template/gsf",
+    "build:guide-docs": "docco src/*.js"
+  },
+  "author": "Andrei Sabau",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "docco": "^0.8.0",
+    "get-set-fetch": "^0.3.0",
+    "jsdoc": "^3.5.5"
+  }
+}
