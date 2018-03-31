@@ -1,0 +1,15 @@
+---
+---
+<table>
+<% for (var i=0, l=sections.length; i<l; i++) { %>
+  <% var section = sections[i]; %>
+  <tr>
+    <td style="vertical-align: top; padding-right: 55px; background-color: #fff">
+      <%= section.docsHtml %>
+    </td>
+    <td style="vertical-align: top">
+      <%= section.codeHtml %>
+    </td>
+  </tr>
+  <% } %>
+</table>
