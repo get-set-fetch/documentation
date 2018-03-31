@@ -1,0 +1,85 @@
+<h3 class="title" id="resource">Resource Entity</h3>
+<hr/>
+
+<p>
+Only resources not already crawled (crawledAt === null) are considered for crawling. <br/>
+Breath-first crawling order is not guaranteed.
+</p>
+
+<h5 class="subtitle">Persisted properties</h5>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">id</th>
+            <td>number | objectId</td>
+            <td>unique identifier, number for sql engines, objectId for mongodb</td>            
+        </tr>
+        <tr>
+            <th scope="row">siteId</th>
+            <td>number | objectId</td>
+            <td>id of the site the resource belongs to</td>            
+        </tr>
+        <tr>
+            <th scope="row">url</th>
+            <td>string</td>
+            <td>full URL of the resource</td>            
+        </tr>
+        <tr>
+            <th scope="row">depth</th>
+            <td>number</td>
+            <td>
+                starting from site url, number of link traversal operations required to reach the resource                
+            </td>            
+        </tr>
+        <tr>
+            <th scope="row">crawledAt</th>
+            <td>date-time</td>
+            <td>
+                time of the last craw operation<br/>
+                a value of null indicates the resource hasn't been crawled yet
+            </td>            
+        </tr>
+    </tbody>
+</table>
+
+<h5 class="subtitle">Transient properties</h5>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">contentType</th>
+            <td>string</td>
+            <td></td>            
+        </tr>
+        <tr>
+            <th scope="row">content</th>
+            <td>string</td>
+            <td></td>            
+        </tr>
+        <tr>
+            <th scope="row">rawContent</th>
+            <td>string | buffer</td>
+            <td></td>            
+        </tr>
+        <tr>
+            <th scope="row">urlsToAdd</th>
+            <td>[string]</td>
+            <td>
+                newly discovered resources (from html anchors, images, ...) after parsing the current resource              
+            </td>            
+        </tr>
+    </tbody>
+</table>

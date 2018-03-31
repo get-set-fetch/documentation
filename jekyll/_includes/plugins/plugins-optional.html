@@ -1,0 +1,37 @@
+<h3 class="title mt-5" id="optional">Optional Plugins</h3>
+<hr/>
+The default plugins provide the minimum functionality to crawl a site. Starting from a given url, additional html pages are identified and crawled.
+<br/><br/>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Phase</th>
+        <th scope="col">Plugin</th>
+        <th scope="col">Constructor Parameters</th>
+        <th scope="col">Functionality</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+        <th scope="row">SAVE</th>
+        <td>PersistResourcePlugin</td>
+        <td>
+<pre>
+extensionRe: {
+    type: regexp,
+    default: /^(gif|png|jpg)$/i
+},
+target: {
+    type: string,
+    default: './tmp'
+}</pre>
+        </td>
+        <td>
+            writes resource to disk
+            <br/>
+            extensionRe - filter resources, target: directory where to save resources, if relative, it is constructed from the current running directory
+        </td>
+        </tr>
+</tbody>
+</table>

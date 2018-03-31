@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>{{ page.title }}</title>
-
+    <title>{{ page.title }} nodejs web crawler and scrapper</title>
     <link rel="stylesheet" href="/css/main.css">
-
   </head>
-
   <body>
-
     {% include header.html %}
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <div class="row">
-
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
+    <div class="container-fluid mt-4">
+      <div class="row flex-xl-nowrap">
+          <div class="col-9 ml-3">
+            <h3 class="title">{{ page.title }}</h3>
+            <hr/>          
             {{content}}
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-
-            {% include navigation.html %}
-
-         
-
-        </div>
-
+          </div>
+          <div class="col-2" style="min-width: 200px;">
+            {% include navigation/navigation.html %}
+          </div>
       </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container -->
-
     {% include footer.html %}
-
   </body>
-
 </html>

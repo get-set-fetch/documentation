@@ -3,3 +3,48 @@
 
 @import "variables";
 @import "bootstrap/scss/bootstrap";
+@import "igorpro.css";
+
+p2 {
+    margin: 0;
+}
+h5.subtitle {
+    color: #8b1010;
+    margin-top: 20px;
+}
+h5.subtitle-card {
+    color: #8b1010;
+}
+h3.title {
+    color: green;
+}
+h5.inner {
+    margin-top: 20px;
+}
+
+.highlight {
+    background-color: #f8f8f8 !important;
+}
+
+.col-comment {
+    text-align: right;
+}
+
+.col-source {
+    text-align: left;
+    background-color: #f8f8f8;
+}
+
+table.jsdoc-params td {
+    background-color: #8b1010;
+}
+
+hr.api-divider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding-bottom: 0;
+}
+

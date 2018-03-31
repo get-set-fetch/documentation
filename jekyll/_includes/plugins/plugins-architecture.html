@@ -1,0 +1,61 @@
+Each resource you crawl (html, image, pdf, ...) belongs to a site. </br>
+Each site has its own set of plugins and plugin options defining the crawling / scrapping behavior for all resources linked to it. </br></br>
+
+A resource is crawled during a set of predefined phases:
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Phase</th>
+            <th scope="col">Sub-phases</th>
+            <th scope="col">Functionality</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">SELECT</th>
+            <td>PRE_SELECT, POST_SELECT</td>
+            <td>based on crawledAt field, a resource is selected to be crawled</td>            
+        </tr>
+        <tr>
+            <th scope="row">FETCH</th>
+            <td>PRE_FETCH, POST_FETCH</td>
+            <td>based on the defined request headers, the resource content is retrieved</td>            
+        </tr>
+        <tr>
+            <th scope="row">PROCESS</th>
+            <td>PRE_PROCESS, POST_PROCESS</td>
+            <td>based on content-type, extension, etc., the resource content is scrapped</td>            
+        </tr>
+        <tr>
+            <th scope="row">SAVE</th>
+            <td>PRE_SAVE, POST_SAVE</td>
+            <td>resource is updated, newly found resources are inserted for future crawling</td>            
+        </tr>
+    </tbody>
+</table>
+
+<h5 class="subtitle">BasePlugin</h5>
+Each plugin extends BasePlugin.</br></br>
+
+Each phase can have one or multiple plugins attached to it.</br>
+A plugin instance declares the phase it belongs to via pluginInstance.getPhase().</br></br>
+
+During each phase, all corresponding plugins are tested for execution via pluginInstance.test(resource). </br>
+Depending on the resource some plugins may return false and have their execution skipped.</br>
+For example, JsDomPlugin can create a jsdom instance from html content but not from binary content.</br></br>
+
+A plugin is invoked via pluginInstance.apply(site, resource).<br/>
+Its return contentent is merged with the current resource.<br/><br/>
+
+The architecture is easily extensible.
+
+</br></br></br>
+
+
+from features:
+clear separation of concerns using an extendable plugin arhitecture centered on crawling and scrapping events
+clean, easy to follow async handling using javascript es6 async/await syntax
+
+<br/>
+All operations are done on the same resource on the same site.
+Describe how default plugins work together to crawl a site.

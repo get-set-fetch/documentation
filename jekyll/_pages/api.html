@@ -1,0 +1,10 @@
+---
+title: API Reference
+permalink: /api.html
+layout: default
+---
+{% for item in site.docs_api %}
+    {% if item.title != 'Index' %}
+        {{ item.content }}
+    {% endif %}
+{% endfor %}
