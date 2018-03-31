@@ -15,7 +15,7 @@ async function simpleCrawl() {
   let site = await Site.get('simpleSite');
   if (!site) {
     site = new Site(
-      'siteA',
+      'simpleSite',
       'https://simpleSite/',
     );
 

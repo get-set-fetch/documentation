@@ -21,7 +21,7 @@ async function imgCrawl() {
 
 
     // by default ExtractUrlPlugin only extracts html resources,
-    // overide the default plugin instance with a new one containing suitable options
+    // override the default plugin instance with a new one containing suitable options
     site.use(new GetSetFetch.plugins.ExtractUrlPlugin({
       extensionRe: /^(jpg|png)$/i,
     }));
