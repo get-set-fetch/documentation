@@ -4,14 +4,20 @@
   "description": "get-set-fetch-documentation",
   "scripts": {
     "build:api-docs": "jsdoc node_modules/get-set-fetch/lib/ -r -c jsdoc/jsdoc-config.json -d jekyll/_docs_api -t template/gsf",
-    "build:guide-docs": "docco docco/getting-started.js docco/image-scrapper.js --layout parallel --template docco/template/custom-2.jst --css docco/template/custom.css --output jekyll/_includes/guides"
+    "build:guide-docs": "docco docco/getting-started.js docco/image-scrapper.js --layout parallel --template docco/template/custom-2.jst --css docco/template/custom.css --output jekyll/_includes/guides",
+    "check:guide-docs": "eslint ./docco/*.js"
   },
   "author": "Andrei Sabau",
   "license": "MIT",
+  "dependencies": {
+    "get-set-fetch": "^0.3.0"
+  },
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "docco": "^0.8.0",
-    "get-set-fetch": "^0.3.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
     "jsdoc": "^3.5.5"
   }
 }
