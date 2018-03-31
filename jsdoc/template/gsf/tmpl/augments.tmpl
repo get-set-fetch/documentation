@@ -5,6 +5,6 @@
 
 <?js if (data.augments && data.augments.length) { ?>
     <ul><?js data.augments.forEach(function(a) { ?>
-        <li><?js= self.linkto(a, a) ?></li>
+        <li><a href="api.html#<?js=a?>"><?js=a?></a></li>
     <?js }) ?></ul>
 <?js } ?>
