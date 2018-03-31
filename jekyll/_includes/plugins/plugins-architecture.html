@@ -47,15 +47,6 @@ For example, JsDomPlugin can create a jsdom instance from html content but not f
 A plugin is invoked via pluginInstance.apply(site, resource).<br/>
 Its return contentent is merged with the current resource.<br/><br/>
 
-The architecture is easily extensible.
-
-</br></br></br>
-
-
-from features:
-clear separation of concerns using an extendable plugin arhitecture centered on crawling and scrapping events
-clean, easy to follow async handling using javascript es6 async/await syntax
-
-<br/>
-All operations are done on the same resource on the same site.
-Describe how default plugins work together to crawl a site.
+The architecture is easily extensible.<br/>
+Just add a new plugin to a site via site.use(pluginInstance). <br/>
+If the site already contains an instance of the same plugin, the new instance will replace the old one.
