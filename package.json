@@ -4,7 +4,7 @@
   "description": "get-set-fetch-documentation",
   "scripts": {
     "build:api-docs": "jsdoc node_modules/get-set-fetch/lib/ -r -c jsdoc/jsdoc-config.json -d jekyll/_docs_api -t template/gsf",
-    "build:guide-docs": "docco src/*.js"
+    "build:guide-docs": "docco docco/getting-started.js docco/image-scrapper.js --layout parallel --template docco/template/custom-2.jst --css docco/template/custom.css --output jekyll/_includes/guides"
   },
   "author": "Andrei Sabau",
   "license": "MIT",
