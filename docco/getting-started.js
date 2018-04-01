@@ -22,7 +22,7 @@ async function simpleCrawl() {
     await site.save();
   }
 
-  // keep crawling site until there are no more resources to crawl
+  // keep crawling the site until there are no more resources to crawl
   await site.crawl();
 
 // end async function
