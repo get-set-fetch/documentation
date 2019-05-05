@@ -1,0 +1,60 @@
+{
+  "title": "Guides : Image Scrapper",
+  "snippets": [
+    
+    {
+      "docs": "<p>import the get-set-fetch dependency</p>",
+      "code": "const GetSetFetch = require('get-set-fetch');\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>the entire code is async for image scrapper,\ndeclare an async function in order to make use of await</p>",
+      "code": "async function imgCrawl() {"
+    }
+    ,
+    
+    {
+      "docs": "<p>init db connection, by default in memory sqlite</p>",
+      "code": "  const { Site } = await GetSetFetch.init();\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>load site if already present,\notherwise create it by specifying a name and the first url to crawl,\nonly links from this location down will be subject to further crawling</p>",
+      "code": "  let site = await Site.get('imgSite');\n  if (!site) {\n    site = new Site(\n      'imgSite',\n      'https://imgSite/index.html',\n    );\n\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>by default ExtractUrlPlugin only extracts html resources,\noverride the default plugin instance with a new one containing suitable options</p>",
+      "code": "    site.use(new GetSetFetch.plugins.ExtractUrlPlugin({\n      extensionRe: /^(html|jpg|png)$/i,\n    }));\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>add persistencePlugin to the current site,\nspecify what extensions to save and where</p>",
+      "code": "    site.use(new GetSetFetch.plugins.PersistResourcePlugin({\n      target: './myTargetDir',\n      extensionRe: /^(jpg|png)$/i,\n    }));\n    await site.save();\n  }\n\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>keep crawling site until there are no more resources to crawl</p>",
+      "code": "  await site.crawl();\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>end async function</p>",
+      "code": "}\n"
+    }
+    ,
+    
+    {
+      "docs": "<p>start crawling</p>",
+      "code": "imgCrawl();\n"
+    }
+    
+    
+  ]
+}

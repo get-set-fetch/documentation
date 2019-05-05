@@ -1,0 +1,24 @@
+{
+  "locals": {    
+    "name": "GetSetFetch",
+    "owner": "GetSetFetch",
+    "description": "nodejs web crawler and scrapper"
+  },
+  "port": "8085",
+  "plugins": [
+    "wintersmith-contents"
+  ],
+  "require": {
+    "typogr": "typogr"
+  },
+  "pug": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "highlightjs": {
+    "classPrefix": "hljs-"
+  }
+}

@@ -24,8 +24,6 @@ async function simpleCrawl() {
 
   // keep crawling the site until there are no more resources to crawl
   await site.crawl();
-
-// end async function
 }
 
 // start crawling

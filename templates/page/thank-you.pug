@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    title #{page.title} - #{locals.name}
+    link(rel='stylesheet', href=contents.css['admin.css'].url)
+    link(rel='stylesheet', href=contents.css['docs.css'].url)
+  body
+    <div id="gsf" class="container-fluid">
+      <div class="row mb-1">
+
+        <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mt-3">
+          <div class="card card-main shadow-sm text-primary bg-white">
+            <div class="card-header text-center px-0">
+              img(src=contents.img['gsf-logo.png'].url alt='getsetfetch' class='')
+              <br/>
+              p 
+                b 
+                  <a class="secondary" href="/extension/index.html">Browser Extension</a>
+
+              P 
+                | Thank you for installing <b>get-set, Fetch!</b>
+                | version <b>0.1.1</b>
+            </div>
+
+            div.card-body.py-3.px-5.text-justify(style="margin-bottom:0")
+              h3.title Added:
+              <hr/>
+              ul
+                li Global Settings: Read, Update
+                li Log: List
+                li Project: List, Create, Read, Update, Delete
+                li Site: List, Read
+                li Scenario: List, Install, Uninstall
+                li Plugin: List, Create, Read, Update, Delete
+                
+                <br/>
+
+                li New scraping scenario: Extract Resources
+                li New scraping scenario: Extract Html Content
+                
+
+              h3.title Fixed:
+              <hr/>
+              ul
+                li Csv content is now correctly exported
+
+              h3.title Security:
+              <hr/>
+              ul
+                li Fixed all moderate and higher severity vulnerabilities from npm audit (03.05.2019)
+
+              <br/>
+              <!--
+              p
+                <a class="secondary" href="/extension/changelog.html">Complete changelog</a>-->
+              
+              p
+                <a class="secondary" href="/extension/index.html">Back to documentation</a>
+          </div>
+        </div>
+
+      </div>
+    </div>

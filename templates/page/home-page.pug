@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    title #{page.title} - #{locals.name}
+    link(rel='stylesheet', href=contents.css['admin.css'].url)
+  body
+    <div id="gsf" class="container-fluid">
+      <div class="row mb-1">
+
+        <div class="col-md-8 mx-auto">
+
+          <div class="row">
+
+            <div class="col-10 col-md-6 mx-auto mt-3">
+              <div class="card card-main shadow-sm text-primary bg-white h-100">
+                <div class="card-header text-center px-0">
+                  img(src=contents.img['gsf-logo.png'].url alt='getsetfetch' class='')
+                  </br>
+                  p 
+                    b 
+                      <a class="secondary" href="/module/index.html">Npm Module</a>
+                </div>
+
+                div.card-body.py-3.px-5.alert.alert-primary.text-justify(style="margin-bottom:0")
+                  | Nodejs npm module for crawling and scraping supporting various storage options under an extendable plugin system.
+                  | <a class="secondary" href="/module/index.html"> ... read more</a>
+              </div>
+            </div>
+
+            <div class="col-10 col-md-6 mx-auto mt-3">
+              <div class="card card-main shadow-sm text-primary bg-white h-100">
+                <div class="card-header text-center px-0">
+                  <a class="secondary" href="/extension/index.html">
+                    img(src=contents.img['gsf-logo.png'].url alt='getsetfetch' class='')
+                    </br>
+                    p
+                      b Browser Extension
+                </div>
+
+                div.card-body.py-3.px-5.alert.alert-primary.text-justify(style="margin-bottom:0")
+                  p Open source data scraper with csv and zip capabilities export.
+
+                  p
+                    | With a modular architecture, this browser extension provides a series of scraping scenarios with predefined default values for fast, 
+                    | minimal configuration scraping. 
+                    | <a class="secondary" href="/extension/index.html"> ... read more</a>
+
+                  <a class="btn btn-secondary" href="#">Install Extension</a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-10 col-md-12 mx-auto">
+              <div class="alert alert-secondary py-3 px-5" role="alert">
+                | The npm module and browser extension are open source tools, free for both personal and commercial use, released under the MIT license.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+     
+    </div>

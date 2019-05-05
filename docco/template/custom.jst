@@ -1,15 +1,15 @@
----
----
-<table>
-<% for (var i=0, l=sections.length; i<l; i++) { %>
-  <% var section = sections[i]; %>
-  <tr>
-    <td style="vertical-align: top; padding-right: 55px; background-color: #fff">
-      <%= section.docsHtml %>
-    </td>
-    <td style="vertical-align: top">
-      <%= section.codeHtml %>
-    </td>
-  </tr>
-  <% } %>
-</table>
+{
+  "template": "page/module-page.pug",
+  "title": "<%= title %>",
+  "snippets": [
+    <% for (var i=1, l=sections.length; i<l; i++) {
+      var section = sections[i];
+    %>
+    {
+      "docs": <%= JSON.stringify(section.docsHtml.replace(/\n$/m, "")) %>,
+      "code": <%= JSON.stringify(section.codeText.replace(/\n$/m, "")) %>
+    }
+    <%= i<l-1 ? "," : '' %>
+    <% } %>
+  ]
+}

@@ -1,23 +1,33 @@
 {
-  "name": "get-set-fetch-documentation",
+  "name": "get-set-fetch-extension-docs",
   "version": "0.1.0",
-  "description": "get-set-fetch-documentation",
-  "scripts": {
-    "build:api-docs": "jsdoc node_modules/get-set-fetch/lib/ -r -c jsdoc/jsdoc-config.json -d jekyll/_docs_api -t template/gsf",
-    "build:guide-docs": "docco docco/getting-started.js docco/image-scrapper.js --layout parallel --template docco/template/custom-2.jst --css docco/template/custom.css --output jekyll/_includes/guides",
-    "check:guide-docs": "eslint ./docco/*.js"
+  "description": "get-set-fetch-extension-docs",
+  "author": {
+    "name": "Andrei Sabau"
   },
-  "author": "Andrei Sabau",
   "license": "MIT",
+  "scripts": {
+    "copy:admin:css": "shx cp \"node_modules/bootstrap/dist/css/bootstrap.min.css\" contents/css",
+    "preview": "wintersmith preview",
+    "build": "wintersmith build",
+    "build:api-docs": "jsdoc node_modules/get-set-fetch/lib/ -r -c jsdoc/jsdoc-config.json -d contents/module/api -t template/gsf",
+    "build:guide-docs": "docco docco/getting-started.js docco/image-scrapper.js --layout parallel --template docco/template/custom.jst --css docco/template/custom.css --output contents/module",
+    "check:guide-docs": "eslint ./docco/*.js",
+    "postinstall": "patch-package"
+  },
   "dependencies": {
-    "get-set-fetch": "^0.3.0"
+    "get-set-fetch": "^0.3.8"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0",
     "docco": "^0.8.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "jstransformer-highlight": "^2.0.0",
+    "patch-package": "^6.1.2",
+    "shx": "^0.3.2",
+    "wintersmith": "^2.5.0",
+    "wintersmith-contents": "^1.0.0"
   }
 }

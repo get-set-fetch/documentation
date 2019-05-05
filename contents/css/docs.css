@@ -1,0 +1,13 @@
+.btn {
+  padding: 1px 6px 1px 6px !important;
+}
+h3.title {
+  color: green;
+  padding-top: 25px;
+}
+.no-border {
+  border: none;
+}
+.col-comment {
+  text-align: right;
+}
