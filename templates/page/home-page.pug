@@ -3,6 +3,14 @@ html(lang='en')
   head
     title #{page.title} - #{locals.name}
     link(rel='stylesheet', href=contents.css['admin.css'].url)
+
+    script(async, src='https://www.googletagmanager.com/gtag/js?id=UA-116668472-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-116668472-1');
+
   body
     <div id="gsf" class="container-fluid">
       <div class="row mb-1">
