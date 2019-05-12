@@ -22,8 +22,8 @@ template: page/standalone-inner-page.pug
 - Record and view crawl logs based on log level: DEBUG, WARN, ERROR,..
 
 - Builtin plugins:
-  - ExtensionFetchPlugin: opens html resources in browser or downloads binary resources
-  - ExtractUrlPlugin: extracts html links and img srcs from the current html page
+  - FetchPlugin: opens html resources in browser or downloads binary resources
+  - ExtractUrlsPlugin: extracts html links and img srcs from the current html page
   - InsertResourcePlugin: adds a new resource to the database with the crawled status 'not-crawled'
   - SelectResourcePlugin: selects a 'not-crawled' resource for crawling
   - UpdateResourcePlugin: adds the crawled info to a resource
