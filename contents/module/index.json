@@ -1,4 +1,4 @@
 {
   "title": "Npm Module",
-  "template": "page/inner-page.pug"
+  "template": "page/combined-inner-page.pug"
 }

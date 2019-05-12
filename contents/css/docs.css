@@ -11,3 +11,10 @@ h3.title {
 .col-comment {
   text-align: right;
 }
+h5.subtitle {
+  color: #8b1010;
+  margin-top: 20px;
+}
+a.underline {
+  text-decoration: underline;
+}

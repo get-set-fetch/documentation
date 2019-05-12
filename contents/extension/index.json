@@ -1,4 +1,4 @@
 {
   "title": "Browser Extension",
-  "template": "page/inner-page.pug"
+  "template": "page/combined-inner-page.pug"
 }

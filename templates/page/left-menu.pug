@@ -52,19 +52,24 @@
 
         else
           if /introduction.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="#introduction">Introduction</a>
+            <a class="nav-link active" href="/extension/index.html#introduction">Introduction</a>
           else
-            <a class="nav-link" href="#introduction">Introduction</a>
+            <a class="nav-link" href="/extension/index.html#introduction">Introduction</a>
 
           if /getting-started.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="#getting-started">Getting Started</a>
+            <a class="nav-link active" href="/extension/index.html#getting-started">Getting Started</a>
           else
-            <a class="nav-link" href="#getting-started">Getting Started</a>
+            <a class="nav-link" href="/extension/index.html#getting-started">Getting Started</a>
 
           if /scenarios.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="#scenarios">Scenarios</a>
+            <a class="nav-link active" href="/extension/index.html#scenarios">Scenarios</a>
           else
-            <a class="nav-link" href="#scenarios">Scenarios</a>
+            <a class="nav-link" href="/extension/index.html#scenarios">Scenarios</a>
+
+          if /changelog.md$/.test(page.filepath.relative)
+            <a class="nav-link active" href="/extension/changelog.html">ChangeLog</a>
+          else
+            <a class="nav-link" href="/extension/changelog.html">ChangeLog</a>
 
           <!--
           if /blog.md$/.test(page.filepath.relative)

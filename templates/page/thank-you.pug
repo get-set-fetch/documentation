@@ -17,45 +17,19 @@ html(lang='en')
                 b 
                   <a class="secondary" href="/extension/index.html">Browser Extension</a>
 
-              P 
-                | Thank you for installing <b>get-set, Fetch!</b>
-                | version <b>0.1.1</b>
+              if /thank-you-install.md$/.test(page.filepath.relative)
+                P
+                  | Thank you for installing <b>get-set, Fetch!</b>
             </div>
 
             div.card-body.py-3.px-5.text-justify(style="margin-bottom:0")
-              h3.title Added:
-              <hr/>
-              ul
-                li Global Settings: Read, Update
-                li Log: List
-                li Project: List, Create, Read, Update, Delete
-                li Site: List, Read
-                li Scenario: List, Install, Uninstall
-                li Plugin: List, Create, Read, Update, Delete
-                
-                <br/>
+              != page.html
 
-                li New scraping scenario: Extract Resources
-                li New scraping scenario: Extract Html Content
-                
-
-              h3.title Fixed:
-              <hr/>
-              ul
-                li Csv content is now correctly exported
-
-              h3.title Security:
-              <hr/>
-              ul
-                li Fixed all moderate and higher severity vulnerabilities from npm audit (03.05.2019)
-
-              <br/>
-              <!--
-              p
-                <a class="secondary" href="/extension/changelog.html">Complete changelog</a>-->
-              
-              p
-                <a class="secondary" href="/extension/index.html">Back to documentation</a>
+              if /thank-you-install.md$/.test(page.filepath.relative)
+                p
+                  <a class="secondary" href="/extension/changelog.html">Complete changelog</a>
+                p
+                  <a class="secondary" href="/extension/index.html">Back to documentation</a>
           </div>
         </div>
 
