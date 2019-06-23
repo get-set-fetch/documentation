@@ -27,13 +27,14 @@ html(lang='en')
 
               if /thank-you-install.md$/.test(page.filepath.relative)
                 P
-                  | Thank you for installing <b>get-set, Fetch!</b>
+                  | Thank you for installing <b>get-set, Fetch! v.#{locals.version}</b>
             </div>
 
             div.card-body.py-3.px-5.text-justify(style="margin-bottom:0")
               != page.html
 
               if /thank-you-install.md$/.test(page.filepath.relative)
+                <p></p>
                 p
                   <a class="secondary" href="/extension/changelog.html">Complete changelog</a>
                 p

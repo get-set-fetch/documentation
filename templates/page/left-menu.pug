@@ -66,6 +66,11 @@
           else
             <a class="nav-link" href="/extension/index.html#scenarios">Scenarios</a>
 
+          if /plugins.md$/.test(page.filepath.relative)
+            <a class="nav-link active" href="/extension/index.html#plugins">Plugins</a>
+          else
+            <a class="nav-link" href="/extension/index.html#plugins">Plugins</a>
+
           if /changelog.md$/.test(page.filepath.relative)
             <a class="nav-link active" href="/extension/changelog.html">ChangeLog</a>
           else
