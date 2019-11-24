@@ -6,4 +6,4 @@ template: page/thank-you.pug
 <hr/>
 
 If you`ve experienced some bugs or have feature suggestions please
-<a class="underline" href="https://github.com/get-set-fetch/extension/issues/new">open an issue</a>.
+<a class="underline" href="https://github.com/get-set-fetch/extension/issues/">open an issue</a>.
