@@ -23,7 +23,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0",
-    "jsdoc": "^3.5.5",
+    "jsdoc": "^3.6.3",
     "jstransformer-highlight": "^2.0.0",
     "patch-package": "^6.1.2",
     "shx": "^0.3.2",
