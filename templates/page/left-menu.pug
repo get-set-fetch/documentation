@@ -5,7 +5,9 @@
         img.mx-auto(src=contents.img['gsf-logo.png'].url alt='getsetfetch')
       </a>
 
-      if /^extension/.test(page.filepath.relative)
+      if /^module/.test(page.filepath.relative)
+        <p></p>
+      else
         <a class="btn btn-secondary float-right w-100" href="#">Install Extension</a>
 
     </div>
@@ -50,31 +52,26 @@
           <br>
           <a class="nav-link" href="https://github.com/get-set-fetch/get-set-fetch">Github</a>
 
-        else
-          if /introduction.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="/extension/index.html#introduction">Introduction</a>
+        else          
+          if /index.md$/.test(page.filepath.relative)
+            <a class="nav-link active" href="/index.html">Getting Started</a>
           else
-            <a class="nav-link" href="/extension/index.html#introduction">Introduction</a>
+            <a class="nav-link" href="/index.html">Getting Started</a>
 
-          if /getting-started.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="/extension/index.html#getting-started">Getting Started</a>
+          if /examples.md$/.test(page.filepath.relative)
+            <a class="nav-link active" href="/examples.html">Examples</a>
           else
-            <a class="nav-link" href="/extension/index.html#getting-started">Getting Started</a>
+            <a class="nav-link" href="/examples.html">Examples</a>
 
-          if /scenarios.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="/extension/index.html#scenarios">Scenarios</a>
+          if /extensibility.md$/.test(page.filepath.relative)
+            <a class="nav-link active" href="/extensibility.html">Extensibility</a>
           else
-            <a class="nav-link" href="/extension/index.html#scenarios">Scenarios</a>
-
-          if /plugins.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="/extension/index.html#plugins">Plugins</a>
-          else
-            <a class="nav-link" href="/extension/index.html#plugins">Plugins</a>
+            <a class="nav-link" href="/extensibility.html">Extensibility</a>
 
           if /changelog.md$/.test(page.filepath.relative)
-            <a class="nav-link active" href="/extension/changelog.html">ChangeLog</a>
+            <a class="nav-link active" href="/changelog.html">ChangeLog</a>
           else
-            <a class="nav-link" href="/extension/changelog.html">ChangeLog</a>
+            <a class="nav-link" href="/changelog.html">ChangeLog</a>
 
           <!--
           if /blog.md$/.test(page.filepath.relative)

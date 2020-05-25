@@ -15,7 +15,7 @@
       if /^module/.test(page.filepath.relative)
         - var articles = env.helpers.contents.list(contents.module);
       else
-        - var articles = env.helpers.contents.list(contents.extension);
+        - var articles = env.helpers.contents.list(contents);
 
       each article in articles
         if /[1-9]\.[1-9]\-/.test(article.filepath.relative)
