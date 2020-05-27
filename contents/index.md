@@ -16,19 +16,26 @@ template: page/standalone-inner-page.pug
 	Binary data (images, pdf files, ...) can be exported as zip archives. Text based data can be exported as csv files.
 </p>
 
-<h3 class="title">Create a new scraping project</h3>
+<h3 class="title">Create a new project</h3>
 <hr/>
 
 <p>
-Start by creating a new scraping project. At a very minimum enter its name, start url and select a scraping scenario. There are two builtin scenarios: scrape-static-content and scrape-dynamic-content. You can install additional 3rd party scenarios from the scenario list page. See examples to get an idea on what types of content can be scraped.
+At the very minimum enter its name, start url and select a scraping scenario. <br/>
+There are two builtin scenarios: scrape-static-content and scrape-dynamic-content responsible for scraping regular and javascript based html pages respectively. You can install community based scenarios from the scenario list page. 
 </p>
 
 <p>
-You can see the newly created project in the project list page. Clicking "scrape" from the action column will start the scraping process. Urls to be scraped will sequentially open in an additional tab with a delay defined at project creation.
+See <a href="/examples.html" class="underline">Examples</a> to get an idea on what types of content can be scraped.
+</p>
+
+<h3 class="title">Start scraping</h3>
+<p>
+You can see the newly created project in the project list page. Clicking "scrape" from the action column will start the scraping process. <br/>
+Urls to be scraped will sequentially open in an additional tab with a delay defined at project creation.
 </p>
 
 <p>
-You can end the scrapping process at any time by closing the responsible browser tab. Next time you start scraping, the process will resume from where it was interrupted.
+You can end the scraping process at any time by closing the responsible browser tab. Next time you start scraping, the process will resume from where it was interrupted.
 </p>
 
 <h3 class="title">Export scraped data</h3>
@@ -51,7 +58,7 @@ You can adjust the log level from the settings page.
 </p>
 
 <p>
-If you find a bug, please <a href="https://github.com/get-set-fetch/extension/issues/new" target="_blank">open an issue</a> and attach in the comment any relevant log entries.
+If you find a bug, please <a href="https://github.com/get-set-fetch/extension/issues/" target="_blank" class="underline">open an issue</a> and attach in the comment any relevant log entries.
 </p>
 
 

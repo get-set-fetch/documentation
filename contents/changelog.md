@@ -26,7 +26,7 @@ template: page/standalone-inner-page.pug
 
 <h5 class="subtitle">Security</h5>
 
-- Fixed all moderate and higher severity vulnerabilities from npm audit
+- Fixed moderate and higher severity vulnerabilities from npm audit
 
 <h3 class="title">Version 0.1.2 (2019-11-24)</h3>
 <hr/>
@@ -37,7 +37,7 @@ template: page/standalone-inner-page.pug
 
 <h5 class="subtitle">Fixed</h5>
 
-- Scrapping errors no longer generate an infinite retry loop
+- Scraping errors no longer generate an infinite retry loop
 
 <h5 class="subtitle">Security</h5>
 
