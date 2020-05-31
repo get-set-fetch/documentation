@@ -5,7 +5,7 @@ template: page/standalone-inner-page.pug
 
 <h3 class="title">Single Static Page Scraping</h3>
 <hr/>
-<ul>
+<ul class="examples">
     <li>
         <a class="bold underline" href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" target="_blank">
             https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers
@@ -18,7 +18,7 @@ template: page/standalone-inner-page.pug
 
 <h3 class="title">Single Static Page Scraping with Infinite Scrolling</h3>
 <hr/>
-<ul>
+<ul class="examples">
     <li>
         <a class="bold underline" href="https://www.uefa.com/uefachampionsleague/history/rankings/players/goals_scored/" target="_blank">
             https://www.uefa.com/uefachampionsleague/history/rankings/players/goals_scored/
@@ -31,7 +31,7 @@ template: page/standalone-inner-page.pug
 
 <h3 class="title">Multiple Static Page Scraping</h3>
 <hr/>
-<ul>
+<ul class="examples">
     <li>
         <a class="bold underline" href="https://www.amazon.com/Car-Seats/b?ie=UTF8&node=1272297011" target="_blank">
             https://www.amazon.com/Car-Seats/
@@ -60,7 +60,7 @@ template: page/standalone-inner-page.pug
 
 <h3 class="title">Dynamic Page Scraping</h3>
 <hr/>
-<ul>
+<ul class="examples">
     <li>
         <a class="bold underline" href="https://imgur.com/r/funny/wkp6pjn" target="_blank">
             https://imgur.com/r/funny

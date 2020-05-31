@@ -3,7 +3,7 @@
 }
 h3.title {
   color: green;
-  padding-top: 25px;
+  padding-top: 0.7rem;
 }
 .no-border {
   border: none;
@@ -20,4 +20,12 @@ a.underline {
 }
 a.bold {
   font-weight: bold;
+}
+
+ul.examples {
+  margin-bottom: 0;
+}
+
+ul.examples li {
+  margin-bottom: 1rem;
 }
