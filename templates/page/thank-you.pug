@@ -19,11 +19,13 @@ html(lang='en')
         <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mt-3">
           <div class="card card-main shadow-sm text-primary bg-white">
             <div class="card-header text-center px-0">
-              img(src=contents.img['gsf-logo.png'].url alt='getsetfetch' class='')
-              <br/>
-              p 
-                b 
-                  <a class="secondary" href="/index.html">Browser Extension</a>
+              <a class="secondary" href="/index.html">
+                img(src=contents.img['gsf-logo.png'].url alt='getsetfetch' class='')
+                <br/>
+                p 
+                  b 
+                    | Browser Extension
+              </a>
 
               if /thank-you-install.md$/.test(page.filepath.relative)
                 P

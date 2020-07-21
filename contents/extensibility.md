@@ -174,7 +174,7 @@ The extension provides builtin plugins and scenarios for most common use cases t
       <ul>
         <li>
         Selectors<br/>
-        One or multiple CSS selectors separated by new line. Each one will be a column when exporting resources under the csv format. Comments can be added via # .
+        One or multiple CSS selectors separated by new line. Each one will be a column when exporting resources under the csv format. By default the innerText property will be scraped but you can define your own using a selector pair, ex: h1, title. Comments can be added via #.
         </li>       
       </ul>
     </td>            

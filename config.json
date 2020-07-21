@@ -2,7 +2,7 @@
   "locals": {
     "name": "GetSetFetch",
     "owner": "GetSetFetch",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "nodejs web crawler and scrapper"
   },
   "port": "8085",
