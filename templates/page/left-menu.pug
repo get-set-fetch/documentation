@@ -8,8 +8,25 @@
       if /^module/.test(page.filepath.relative)
         <p></p>
       else
-        <a class="btn btn-secondary float-right w-100" href="https://chrome.google.com/webstore/detail/get-set-fetch-web-scraper/obanemoliijohdnhjjkdbekbhdjeolnk" target="_blank">Install Extension</a>
-
+        <a id="install" class="btn btn-secondary float-right w-100" href="#" target="_blank">Install Extension</a>
+        <ul class="browser-support">
+          <li>
+            <a href="https://chrome.google.com/webstore/detail/get-set-fetch-web-scraper/obanemoliijohdnhjjkdbekbhdjeolnk" title="Install in Chrome" target="_blank">
+              <img src="./img/chrome_64x64.png"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/get-set-fetch-web-scraper/" title="Install in Firefox" target="_blank">
+              <img src="./img/firefox_64x64.png"/>
+            </a>
+          </li>
+          <li>
+            <img src="./img/opera_64x64.png" title="Not yet available"/>
+          </li>
+          <li>
+            <img src="./img/edge_64x64.png" title="Not yet available"/>
+          </li>
+        </ul>
     </div>
   </div>
   <div class="row">
