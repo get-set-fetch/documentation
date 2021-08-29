@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+$green-logo: #4A7729;
+$green: green;
+
+$navbar-background-color: #f6f7f7;
+$navbar-item-img-max-height: 5rem;
+
+$navbar-item-active-background-color: transparent;
+$navbar-item-active-color: #293f54;
+
+$navbar-item-hover-background-color: #eaebeb;
+$navbar-item-hover-color: #101821;
+
+$menu-item-active-background-color: transparent;
+$menu-item-active-color: #293f54;
+
+$menu-item-hover-background-color: #eaebeb;
+$menu-item-hover-color: #101821;
+
+$card-background-color: #fff;
+$card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$card-radius: 0.25rem;
+
+$card-header-shadow: none;
+
+$content-heading-color: $green;
+
+@import "../node_modules/bulma/bulma.sass";
+
+html {
+   background-color: #f6f7f7;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width: 1023px) {
+    .section {
+        padding: 0;
+    }
+}
+
+.content {
+    a {
+        text-decoration: nonde;
+        &:hover {
+            text-decoration: underline;
+            color: $blue;
+        }
+        &:active {
+            color: $blue;
+        }
+    }
+
+    hr {
+        margin: 1rem 0;
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        height: 1px
+    }
+
+    h3 {
+        color: $green;
+        margin-bottom: 0.5rem;
+        font-size: 1.25em;
+        clear: both;
+    }
+
+    h5 {
+        color: #8b1010;
+        margin-bottom: 0.25rem;
+    }
+
+    p.install-extension {
+        float:left;
+        max-width: 70px;
+        margin: 1rem 1rem 1rem 0;
+        text-align: center;
+    }
+}
+
+.menu-list a {
+    text-align: right;
+    margin-right: 0;
+    padding-right: 0.25rem;
+
+    &.is-active {
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-decoration: underline;
+    }
+}
+
+.navbar-start {
+    @extend .ml-3;
+
+    .navbar-item {
+        border-bottom: 1px solid gray;
+        font-weight: 500;
+    
+        &:hover {
+            border-bottom: 3px solid #293f54;
+            font-weight: 500;
+        }
+        &.is-active {
+            border-bottom: 3px solid #293f54;
+        }
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+}
+
+.column.readable {
+    max-width: 1000px;
+}
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+div.highlight {
+    position: relative;
+}
+
+.copy {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.15rem;
+    margin: 0.5rem;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+div.highlight:hover > .copy, .copy:hover {
+    display: inline-block;
+}
+
+
+.copy-ico {
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='%23333' d='M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z'/%3e%3c/svg%3e") 0 0/100% 100% no-repeat;
+}
+
+.copied {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.15rem;
+    margin: 0.5rem;
+}
+
+.copied-ico {
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='green' d='M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z'/%3e%3c/svg%3e") 0 0/100% 100% no-repeat;
+}
+
+.github-ico {
+    float:left;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='12 12 40 40'%3e%3cpath fill='%23333' d='M32 13.4c-10.5 0-19 8.5-19 19 0 8.4 5.5 15.5 13 18 1 .2 1.3-.4 1.3-.9v-3.2c-5.3 1.1-6.4-2.6-6.4-2.6-.9-2.1-2.1-2.7-2.1-2.7-1.7-1.2.1-1.1.1-1.1 1.9.1 2.9 2 2.9 2 1.7 2.9 4.5 2.1 5.5 1.6.2-1.2.7-2.1 1.2-2.6-4.2-.5-8.7-2.1-8.7-9.4 0-2.1.7-3.7 2-5.1-.2-.5-.8-2.4.2-5 0 0 1.6-.5 5.2 2 1.5-.4 3.1-.7 4.8-.7 1.6 0 3.3.2 4.7.7 3.6-2.4 5.2-2 5.2-2 1 2.6.4 4.6.2 5 1.2 1.3 2 3 2 5.1 0 7.3-4.5 8.9-8.7 9.4.7.6 1.3 1.7 1.3 3.5v5.2c0 .5.4 1.1 1.3.9 7.5-2.6 13-9.7 13-18.1 0-10.5-8.5-19-19-19z'/%3e%3c/svg%3e") 0 0/100% 100% no-repeat;
+}
+
+.github-btn {
+    background-color: #eee;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fcfcfc),to(#eee));
+    background-image: linear-gradient(to bottom,#fcfcfc 0,#eee 100%);
+    background-repeat: no-repeat;
+    border: 1px solid #d5d5d5;
+
+    padding: 3px 10px 3px 8px;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 4px;
+
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+

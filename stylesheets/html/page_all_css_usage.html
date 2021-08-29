@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open source scraper</title>
+    <link rel="stylesheet" href="../css/gsf.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+
+        function copyToClipboard(btn) {
+            const code = window.navigator.clipboard.writeText(btn.parentElement.querySelector("code").innerText);
+
+            btn.classList.add('is-hidden');
+            btn.nextElementSibling.classList.remove('is-hidden');
+
+            setTimeout(function () {
+                btn.classList.remove('is-hidden');
+                btn.nextElementSibling.classList.add('is-hidden');
+            }, 2000);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="section hero is-justify-content-start pt-3">
+
+
+
+
+        <div class="columns">
+            <div class="column is-narrow is-hidden-touch has-text-right">
+                <img src="gsf-logo.png" width="159" height="63">
+                <aside class="menu">
+                    <ul class="menu-list">
+                        <li><a class="is-active">Install Extension</a></li>
+                        <li><a>Getting Started</a></li>
+                        <li><a>Examples</a></li>
+                        <li><a>Extensibility</a></li>
+                        <li><a>ChangeLog</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="column readable">
+                <div class="container">
+
+                    <nav class="navbar has-shadow is-align-items-baseline" role="navigation"
+                        aria-label="main navigation">
+                        <div class="navbar-brand">
+                            <a class="navbar-item is-hidden-desktop" href="https://getsetfetch.org">
+                                <img src="gsf-logo.png" width="159" height="63">
+                            </a>
+
+                            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                                data-target="navbarBasicExample">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                            </a>
+                        </div>
+
+                        <div id="navbarBasicExample" class="navbar-menu">
+
+                            <!-- single level menu for desktop -->
+                            <div class="navbar-start is-hidden-touch">
+                                <a class="navbar-item is-active">
+                                    Node.js Package
+                                </a>
+                                <a class="navbar-item">
+                                    Browser Extension
+                                </a>
+                                <a class="navbar-item">
+                                    Blog
+                                </a>
+                            </div>
+
+                            <!-- multi level menu for mobile -->
+                            <div class="navbar-start is-hidden-desktop">
+                                <a class="navbar-item">
+                                    Nodejs Package
+                                </a>
+                                <ul>
+                                    <li><a>Npm Entry 1</a></li>
+                                    <li><a>Npm Entry 2</a></li>
+                                    <li><a>Npm Entry 3</a></li>
+                                </ul>
+                                <a class="navbar-item is-active">
+                                    Browser Extension
+                                </a>
+                                <ul>
+                                    <li><a>Install Extension</a></li>
+                                    <li><a>Getting Started</a></li>
+                                    <li><a>Examples</a></li>
+                                    <li><a>Extensibility</a></li>
+                                    <li><a>ChangeLog</a></li>
+                                </ul>
+                                <a class="navbar-item">
+                                    Blog
+                                </a>
+                            </div>
+
+
+                            <div class="navbar-end">
+                                <div class="navbar-item">
+                                    <a class="github-btn" href="https://github.com/jgthms/bulma"
+                                        rel="noopener noreferrer" target="_blank"
+                                        aria-label="Star jgthms/bulma on GitHub">
+                                        <span class="github-ico" aria-hidden="true"></span>
+                                        <span class="gh-text">Star</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+
+                    <div class="card mt-4">
+                        <header class="card-header is-align-items-base line pr-3">
+                            <h2 class="card-header-title pl-5 has-text-weight-medium">
+                                Getting Started
+                            </h2>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+
+                                <h3>Introduction</h3>
+                                <hr />
+                                <p>
+                                    get-set, Fetch! is an open source (MIT license) browser extension scraper with csv
+                                    and zip export
+                                    capabilities that originally started as an <a href="/module" class="underline">npm
+                                        module</a>.
+                                </p>
+
+                                <div class="language-plaintext highlighter-rouge">
+                                    <div class="highlight" onload="javascript:initCopy(this)">
+                                        <pre class="highlight line-numbers">
+                                            <code>$ npm install puppeteer</code>
+                                        </pre>
+
+                                        <span class="button copy icon copy-ico"
+                                            onclick="javascript:copyToClipboard(this)"></span>
+                                        <div class="copied is-hidden">
+                                            <span class="is-size-6">Copied!</span>
+                                            <span class="icon copied-ico"></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <h5>Feedback</h5>
+                                <p class="install-extension">
+                                    If you find a bug, please <a
+                                        href="https://github.com/get-set-fetch/extension/issues/" target="_blank"
+                                        class="underline">open an issue</a> and attach in the comment any relevant log
+                                    entries.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+</body>
+
+</html>

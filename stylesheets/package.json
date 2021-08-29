@@ -1,0 +1,15 @@
+{
+  "name": "@get-set-fetch/documentation-stylesheets",
+  "version": "1.0.0",
+  "scripts": {
+    "css:build": "sass scss/main.scss css/gsf.css && purgecss --css css/gsf.css --content html/page_all_css_usage.html --output css/gsf.min.css",
+    "css:watch": "sass scss/main.scss css/gsf.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "purgecss": "^4.0.3",
+    "sass": "^1.38.0"
+  }
+}
