@@ -1,0 +1,10 @@
+# jekyll build directories
+_site/
+_start/
+
+# jekyll cache
+.jekyll-cache/
+
+
+# css output
+css/

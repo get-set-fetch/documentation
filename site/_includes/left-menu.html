@@ -1,0 +1,22 @@
+{% if page.dir contains 'extension' %}
+{% assign menu_pages = site.pages | where: "extension", true %}
+{% else if page.dir contains 'node' %}
+{% assign menu_pages = site.pages | where: "node", true %}
+{% else %}
+{% assign menu_pages = site.pages %}
+{% endif %}
+
+{% assign sorted_menu_pages = menu_pages | sort:"order" %}
+
+
+<ul class="menu-list">
+    {% for menu_page in sorted_menu_pages %}
+    <li>
+        {% if menu_page.order != 0 %}
+        <a href="{{ menu_page.url }}" {% if menu_page.url==page.url %} class="is-active" {% endif %}>
+            {{menu_page.title}}
+        </a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

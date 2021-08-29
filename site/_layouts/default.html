@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+  <div class="section hero is-justify-content-start pt-3">
+
+    <div class="columns">
+
+      <div class="column is-narrow is-hidden-touch has-text-right">
+        <a class="navbar-item" href="/">
+          <img src="../assets/img/gsf-logo.png" width="159" height="63">
+        </a>
+        <aside class="menu">
+          {% include left-menu.html %}
+        </aside>
+      </div>
+
+      <div class="column readable">
+        <div class="container">
+          <nav class="navbar has-shadow is-align-items-baseline" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item is-hidden-desktop" href="/">
+                <img src="../assets/img/gsf-logo.png" width="159" height="63">
+              </a>
+
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+              {% include top-navbar-start.html %}
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <a class="github-btn"
+                    href="{% if page.extension==true%}https://github.com/get-set-fetch/extension{% else%}https://github.com/get-set-fetch/scraper{% endif %}"
+                    rel="noopener noreferrer" target="_blank"
+                    aria-label="Star get-set-fetch/{% if page.extension==true%}extension{% else%}scraper{% endif %} on GitHub"
+                    title="Star get-set-fetch/{% if page.extension==true%}extension{% else%}scraper{% endif %} on GitHub">
+                    <span class="github-ico" aria-hidden="true"></span>
+                    <span class="gh-text">Star</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </nav>
+
+          <div class="card mt-4">
+            <header class="card-header is-align-items-base line pr-3">
+              <h2 class="card-header-title pl-5 has-text-weight-medium">{{page.title}}</h2>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                {{ content }}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+</body>
+
+</html>

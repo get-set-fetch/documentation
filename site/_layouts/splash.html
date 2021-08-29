@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+    <div class="hero pt-3">
+
+        <div class="container">
+            <a class="navbar-item" href="/">
+                <img src="./assets/img/gsf-logo.png" width="159" height="63">
+            </a>
+
+            <div class="card mt-4">
+                <header class="card-header is-align-items-base line pr-3">
+                    <h2 class="card-header-title pl-5 has-text-weight-medium">{{page.title}}</h2>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
