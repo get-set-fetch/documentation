@@ -5,10 +5,7 @@
 {% else %}
 {% assign menu_pages = site.pages %}
 {% endif %}
-
 {% assign sorted_menu_pages = menu_pages | sort:"order" %}
-
-
 <ul class="menu-list">
     {% for menu_page in sorted_menu_pages %}
     <li>
