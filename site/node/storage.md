@@ -2,7 +2,7 @@
 title: Storage
 order: 20
 ---
-Each URL (web page, image, API endpoint, ...) represents a `Resource`. Binary content is stored under `resource.data` while text based content is stored under `resource.content`. Resources sharing the same scrape configuration and discovered from the same initial URL(s) are grouped in a `Project`. 
+Each URL (web page, image, API endpoint, ...) represents a `Resource`. Binary content is stored under `resource.data` while text based content is stored under `resource.content`. Resources sharing the same project configuration and discovered from the same initial URL(s) are grouped in a `Project`. 
 Projects represent the starting point for any scraping operation.
 
 You can add additional storage support by implementing the `Storage`, `Project`, `Resource` abstract classes. \\

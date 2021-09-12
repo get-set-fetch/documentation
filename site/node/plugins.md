@@ -12,7 +12,7 @@ await PluginStore.add(fileOrDirPath);
 
 ## Plugins
 
-The entire scrape process is plugin based. A scrape configuration (see [Examples](examples.html)) contains an ordered list of plugins to be executed against each to be scraped web resource. Each plugin embeds a json schema for its options. Check the schemas for complete option definitions.
+The entire scrape process is plugin based. A project configuration (see [Examples](examples.html)) contains an ordered list of plugins to be executed against each to be scraped web resource. Each plugin embeds a json schema for its options. Check the schemas for complete option definitions.
 
 ### Node Fetch Plugin
 Uses nodejs `http.request` / `https.request` to fetch html and binary data. Response content is available under Uint8Array `resource.data`.  Html content can be retrieved via `resource.data.toString('utf8')`.

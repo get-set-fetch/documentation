@@ -2,9 +2,9 @@
 title: Pipelines
 order: 40
 ---
-Each pipeline contains a series of plugins with predefined values for all plugin options. A scrape configuration extends a pipeline by replacing/adding new plugins or overriding the predefined plugin options.
+Each pipeline contains a series of plugins with predefined values for all plugin options. A project configuration extends a pipeline by replacing/adding new plugins or overriding the predefined plugin options.
 
-Take a look at [Examples](examples.html) for real world scrape configurations.
+Take a look at [Examples](examples.html) for real world project configurations.
 
 ### Base Pipeline: Static Content 
 Used to scrape static data, does not rely on javascript to either read or alter the html content. 

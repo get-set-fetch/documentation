@@ -2,8 +2,8 @@
 title: Scrape
 order: 60
 ---
-### Start from a Scrape Configuration
-No need to specify a starting scrape project. One will be automatically created based on input URL and plugin definitions.
+### Start from a project configuration
+No need to specify a project instance. One will be automatically created based on the provided project options.
 ```js
 const { KnexStorage, PuppeteerClient, Scraper} = require('@get-set-fetch/scraper');
 
@@ -41,8 +41,8 @@ scraper.scrape({
 });
 ```
 
-### Start from a Scrape Hash
-A scrape hash represents a zlib archive of a scrape configuration encoded as base64. To minimize size a preset deflate dictionary is used.
+### Start from a project hash
+A project hash represents a zlib archive of a project configuration encoded as base64. To minimize size a preset deflate dictionary is used.
 
 ```js
 const { KnexStorage, PuppeteerClient, Scraper, encode, decode } = require('@get-set-fetch/scraper');
@@ -51,16 +51,16 @@ const storage = new KnexStorage();
 const client = new PuppeteerClient();
 const scraper = new Scraper(storage, client);
 
-const scrapeHash = 'ePnXQdMJrZNNDoMgEIWvQrqSNNWm3bnoCXoHMpYRiYBGsE1v30FDf+JCF12QwFu8N5n38TYz4NQICq/ahy2EruH4Q8Kn0OOSmW3gLmml7gzmFgNICMD2rKcziw/d6unGgixdaA63RhuZnTi7MChr8gyzRFHpR6QF7OKE/0g78y933yO0hA7LLAFHXfK4/pWu0E3ePUoNeTeoIr6K2JDoapEG9qJ6CjfaCocoO2rpjiIFxpgXe3Oswg==';
+const projectHash = 'ePnXQdMJrZNNDoMgEIWvQrqSNNWm3bnoCXoHMpYRiYBGsE1v30FDf+JCF12QwFu8N5n38TYz4NQICq/ahy2EruH4Q8Kn0OOSmW3gLmml7gzmFgNICMD2rKcziw/d6unGgixdaA63RhuZnTi7MChr8gyzRFHpR6QF7OKE/0g78y933yO0hA7LLAFHXfK4/pWu0E3ePUoNeTeoIr6K2JDoapEG9qJ6CjfaCocoO2rpjiIFxpgXe3Oswg==';
 
-// outputs the scrape configuration from the above "Scrape starting from a scrape configuration" section
-// use encode to generate a scrape hash
-console.log(decode(scrapeHash));
+// outputs the project options from the above "Start from Project Options" section
+// use encode to generate a project hash
+console.log(decode(projectHash));
 
-scraper.scrape(scrapeHash);
+scraper.scrape(projectHash);
 ```
 
-### Start from a Predefined Project
+### Start from a predefined project
 A new project is defined with plugin options overriding default ones from the [browser-static-content](pipelines.html#pipeline-browser-static-content) pipeline.
 
 ```js
@@ -116,23 +116,23 @@ await project.batchInsertResourcesFromFile(
 );
 ```
 
-
 ### Resume scraping
 If a project has unscraped resources, just re-start the scrape process. Already scraped resources will be ignored.
-You can retrieve an existing project by name or id. When scraping from a scrape configuration the project name gets populated with the starting URL hostname.
+You can retrieve an existing project by name or id.
 
 ```js
 const { KnexStorage, PuppeteerClient, Scraper } = require('@get-set-fetch/scraper');
 
 const storage = new KnexStorage();
 const { Project } = await storage.connect();
-const project = await Project.get('startUrlHostname');
+const project = await Project.get('projectName');
 
 const client = new PuppeteerClient();
 
 const scraper = new Scraper(storage, client);
 scraper.scrape(project);
 ```
+
 ### Scrape events
 List of scrape events with their corresponding callback arguments.
 - `ResourceSelected`: (project, resource) \\
@@ -172,7 +172,7 @@ All options are optional :) with all combinations valid. The resulting scrape be
   - list of proxies to be used with each entry a {host, port} object
   - default: `[null]`
 - `maxRequests`
-  - Maximum number of requests to be run in parallel. Browser clients are restricted to `1`, supporting only sequential scraping. Use [DOM clients](#dom-clients) for parallel scraping.
+  - Maximum number of requests to be run in parallel. Browser clients are restricted to `1`, supporting only sequential scraping. Use [DOM clients](clients.html#dom-clients) for parallel scraping.
   - default: `1`
 - `delay`:
   - Minimum amount of time (ms) between starting to scrape two resources.
@@ -202,7 +202,7 @@ const concurrencyOpts = {
   }
 }
 
-scraper.scrape(scrapeConfig, concurrencyOpts);
+scraper.scrape(projectOpts, concurrencyOpts);
 ```
 The above concurrency options will use proxyA, proxyB when fetching resources. 
 
@@ -232,23 +232,25 @@ const runtimeOpts = {
     mem: 1024 * 1024 * 10
   }
 }
-scraper.scrape(scrapeConfig, concurrencyOpts, processOpts);
+scraper.scrape(projectOpts, concurrencyOpts, processOpts);
 ```
 The above runtime options will restrict scraper to 10MB process memory usage while also making sure total OS memory usage doesn't exceed 75%.
 
-### Scrape options
-Additional, optional scrape flags:
+### Command line options
+Additional, command line related flags:
 - `overwrite`
-  - Overwrite a project if already exists.
+  - Overwrite a project if it already exists.
   - default: `false`
 - `discover`
-  - Don't restrict scraping to a particular project. Once scraping a project completes, find other existing projects to scrape from..
+  - Don't restrict scraping to a particular project. Once scraping a project completes, find other existing projects to scrape from.
   - default: `false`
+- `retry`
+  - After a discover operation completes and all projects are scraped, keep issueing discover commands at the specified interval (seconds).
 
 ```js
-const scrapeOpts = {
-  overwrite:true,
-  discover:true
+const cliOpts = {
+  discover:true,
+  retry: 30
 }
-scraper.scrape(scrapeConfig, concurrencyOpts, processOpts, scrapeOpts);
+scraper.scrape(projectOpts, concurrencyOpts, processOpts, cliOpts);
 ```

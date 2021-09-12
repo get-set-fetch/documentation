@@ -56,9 +56,9 @@ const { Scraper } = require('@get-set-fetch/scraper');
 const scraper = new Scraper(storage, client);
 ```
 
-### Define a scrape configuration
+### Define a project
 ```js
-const scrapeConfig = {
+const projectOpts = {
   name: "myScrapeProject",
   pipeline: 'browser-static-content',
   pluginOpts: [
@@ -106,7 +106,7 @@ const scrapeConfig = {
   ]
 };
 ```
-You can define a scrape configuration in multiple ways. The above example is the most direct one.
+You can define a project in multiple ways. The above example is the most direct one.
 You define one or more starting urls, a predefined pipeline containing a series of scrape plugins with default options, and any plugin options you want to override. See [pipelines](node/pipelines.html) and [plugins](node/plugins.html) for all available options.
 
 ExtractUrlsPlugin.maxDepth defines a maximum depth of resources to be scraped. The starting resource has depth 0. Resources discovered from it have depth 1 and so on. A value of -1 disables this check.
@@ -130,7 +130,7 @@ A minimum delay of 5000 ms will be enforced between scraping consecutive resourc
 
 ### Start scraping
 ```js
-scraper.scrape(scrapeConfig, concurrencyOpts);
+scraper.scrape(projectOpts, concurrencyOpts);
 ```
 The entire process is asynchronous. Listen to the emitted [scrape events](node/scrape.html#scrape-events) to monitor progress.
 
