@@ -59,10 +59,10 @@ config-sqlite-cheerio.json
     },
     "debug": false
   },
-  "dom": {
-    "client": "cheerio"
+  "client": {
+    "name": "cheerio"
   },
-  "scrape": {
+  "project": {
     "name": "myProj",
     "pipeline": "dom-static-content",
     "pluginOpts": [
@@ -116,16 +116,18 @@ config-sqlite-puppeteer.json
     },
     "debug": false
   },
-  "dom": {
-    "client": "puppeteer",
-    "ignoreHTTPSErrors": true,
-    "args": [
-      "--ignore-certificate-errors",
-      "--no-first-run",
-      "--single-process"
-    ]
+  "client": {
+    "name": "puppeteer",
+    "opts": {
+      "ignoreHTTPSErrors": true,
+      "args": [
+        "--ignore-certificate-errors",
+        "--no-first-run",
+        "--single-process"
+      ]
+    }
   },
-  "scrape": {
+  "project": {
     "name": "myProj",
     "pipeline": "browser-static-content",
     "pluginOpts": [
@@ -184,16 +186,18 @@ config-pg-puppeteer.json
     },
     "debug": false
   },
-  "dom": {
-    "client": "puppeteer",
-    "ignoreHTTPSErrors": true,
-    "args": [
-      "--ignore-certificate-errors",
-      "--no-first-run",
-      "--single-process"
-    ]
+ "client": {
+    "name": "puppeteer",
+    "opts": {
+      "ignoreHTTPSErrors": true,
+      "args": [
+        "--ignore-certificate-errors",
+        "--no-first-run",
+        "--single-process"
+      ]
+    }
   },
-  "scrape": {
+  "project": {
     "name": "myProj",
     "pipeline": "browser-static-content",
     "pluginOpts": [
