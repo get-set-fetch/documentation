@@ -11,3 +11,14 @@ defaults:
       path: "node"
     values:
       node: true
+  - scope:
+      path: "blog"
+    values:
+      blog: true
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      blog: true
+      is_post: true
+      permalink: /blog/:title:output_ext

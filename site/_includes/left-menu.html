@@ -1,9 +1,11 @@
-{% if page.dir contains 'extension' %}
+{% if page.extension %}
 {% assign menu_pages = site.pages | where: "extension", true %}
-{% else if page.dir contains 'node' %}
+{% endif %}
+{% if page.blog %}
+{% assign menu_pages = site.pages | where: "blog", true %}
+{% endif %}
+{% if page.node %}
 {% assign menu_pages = site.pages | where: "node", true %}
-{% else %}
-{% assign menu_pages = site.pages %}
 {% endif %}
 {% assign sorted_menu_pages = menu_pages | sort:"order" %}
 <ul class="menu-list">

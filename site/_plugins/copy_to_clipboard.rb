@@ -1,4 +1,4 @@
-Jekyll::Hooks.register :pages, :post_render do |page|
+def copy_to_clipboad (page)
     require 'nokogiri'
 
     # debug
@@ -22,5 +22,13 @@ Jekyll::Hooks.register :pages, :post_render do |page|
        
     end
     page.output = page.output = doc.to_html
+end
+
+Jekyll::Hooks.register :posts, :post_render do |page|
+    copy_to_clipboad page
+end
+
+Jekyll::Hooks.register :pages, :post_render do |page|
+    copy_to_clipboad page
 end
   

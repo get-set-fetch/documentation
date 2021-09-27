@@ -7,11 +7,9 @@
         href="/extension/getting-started.html">
         Browser Extension
     </a>
-    <!--
     <a class="navbar-item {% if page.url contains '/blog/' %} is-active {% endif %}" href="/blog/">
         Blog
     </a>
-    -->
 </div>
 
 <!-- multi level menu for mobile -->
@@ -38,9 +36,14 @@
         {% endif %}
         {% endfor %}
     </ul>
-    <!--
     <a class="navbar-item" href="/blog/">
         Blog
     </a>
-    -->
+    <ul>
+        {% assign menu_pages = site.pages | where: "blog", true %}
+        {% assign sorted_menu_pages = menu_pages | sort:"order" %}
+        {% for menu_page in sorted_menu_pages %}
+        <li><a href="{{ menu_page.url }}"> {{menu_page.title}}</a></li>
+        {% endfor %}
+    </ul>
 </div>
