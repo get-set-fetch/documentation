@@ -19,7 +19,7 @@ A sitemap is just an XML file with a parent `<urlset>` tag containing `<url>` en
 
 
 ### Scrape Configuration
-Starting from an initial URL we need to parse, extract and visit all identified URLs from the same domain. We don't need a browser for this, a [DOM client](/node/clients#dom-clients) like cheerio will do.
+Starting from an initial URL we need to parse, extract and visit all identified URLs from the same domain. We don't need a browser for this, a [DOM client](/node/clients.html#dom-clients) like cheerio will do.
 ```js
 "client": {
     "name": "cheerio"
@@ -28,7 +28,7 @@ Starting from an initial URL we need to parse, extract and visit all identified 
 
 In @get-set-fetch/scraper each url represents a resource. Depending on the selected [pipeline](/node/pipelines.html) a series of plugins is executed against each resource. 
 
-[ExtractUrlsPlugin](/node/plugins#extract-urls-plugin) is responsible for parsing html resources and extracting new URLs to be scraped. By default it only extracts URLs from html links ending in `.html` due to `urlSelector` default value of `a[href$=".html"]`.
+[ExtractUrlsPlugin](/node/plugins.html#extract-urls-plugin) is responsible for parsing html resources and extracting new URLs to be scraped. By default it only extracts URLs from html links ending in `.html` due to `urlSelector` default value of `a[href$=".html"]`.
 This obviously is not enough; html documents may have extensions different than `.html` or no extension at all. Follow all links using the generic selector `a`. This will also include external links outside the sitemap domain. We need to filter these ones out by extending the default plugin class and overriding `isValidUrl` method. Only URLs from the getsetfetch.org domain will be extracted. `ExtractUrlsPlugin` is a plugin that can run in both browser and nodejs environment depending on the `domRead`, `domWrite` flags. Disable such inherited flags for the custom plugin since it's not going to run in browser.
 ```ts
 export default class ExtractSameHostUrlsPlugin extends ExtractUrlsPlugin {
@@ -43,7 +43,7 @@ export default class ExtractSameHostUrlsPlugin extends ExtractUrlsPlugin {
 }
 ```
 
-Since we're not interested in extracting content, we can replace the default [ExtractHtmlContentPlugin](/node/plugins#extract-html-content-plugin) with a plugin that never triggers, always returning `false` from the `test` method.
+Since we're not interested in extracting content, we can replace the default [ExtractHtmlContentPlugin](/node/plugins.html#extract-html-content-plugin) with a plugin that never triggers, always returning `false` from the `test` method.
 ```ts
 export default class SkipExtractHtmlContentPlugin extends Plugin {
   test() {
