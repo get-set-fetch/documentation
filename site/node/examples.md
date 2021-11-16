@@ -2,7 +2,7 @@
 title: Examples
 order: 90
 ---
-What follows are real world scrape examples. If in the meanwhile the pages have changed, the project options below may become obsolete and no longer produce the expected scrape results. Last check performed on 12th September 2021. 
+What follows are real world scrape examples. If in the meanwhile the pages have changed, the project options below may become obsolete and no longer produce the expected scrape results. Last check performed on 31th October 2021. 
 
 [Acceptance test definitions](https://github.com/get-set-fetch/test-utils/tree/main/lib/scraping-suite) may also serve as inspiration.
 

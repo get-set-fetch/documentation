@@ -2,10 +2,11 @@
 title: Storage
 order: 20
 ---
-Each URL (web page, image, API endpoint, ...) represents a `Resource`. Binary content is stored under `resource.data` while text based content is stored under `resource.content`. Resources sharing the same project configuration and discovered from the same initial URL(s) are grouped in a `Project`. 
-Projects represent the starting point for any scraping operation.
+Each scraped URL (web page, image, API endpoint, ...) represents a `Resource`. Binary content is stored under `resource.data` while text based content is stored under `resource.content`. Resources sharing the same project configuration and discovered from the same initial URL(s) are grouped in a `Project`. 
 
-You can add additional storage support by implementing the `Storage`, `Project`, `Resource` abstract classes. \\
+Projects represent the starting point for any scraping operation. Each project has its own `Queue` and `Resource` collections with their own storage options. This means you can use one storage type for managing the queue and a different one for storing the scraped resources. To be scraped URLs are first added to `Queue`, successfully scraped content is saved under `Resource`.
+
+You can add additional storage support by implementing a subset of the `Storage`, `Project`, `Queue`, `Resource` abstract classes. \\
 Currently supported databases, Sqlite, MySQL, PostgreSQL, are accessed using `KnexStorage`.
 
 Check below connection examples for possible values of `conn`.
