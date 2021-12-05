@@ -6,14 +6,14 @@ Each scraped URL (web page, image, API endpoint, ...) represents a `Resource`. B
 
 Projects represent the starting point for any scraping operation. Each project has its own `Queue` and `Resource` collections with their own storage options. This means you can use one storage type for managing the queue and a different one for storing the scraped resources. To be scraped URLs are first added to `Queue`, successfully scraped content is saved under `Resource`.
 
-You can add additional storage support by implementing a subset of the `Storage`, `Project`, `Queue`, `Resource` abstract classes. \\
-Currently supported databases, Sqlite, MySQL, PostgreSQL, are accessed using `KnexStorage`.
+You can add additional storage support by extending the `Connection` abstract class and implementing a subset of the `IProjectStorage`, `IQueueStorage`, `IResourceStorage` interfaces. \\
+Currently supported databases - Sqlite, MySQL, PostgreSQL - are accessed using `KnexConnection`.
 
-Check below connection examples for possible values of `conn`.
+Check below connection examples for possible values of `connConfig`.
 
 ```js
-const { KnexStorage } = require('@get-set-fetch/scraper');
-const storage = new KnexStorage(conn);
+const { KnexConnection } = require('@get-set-fetch/scraper');
+const conn = new KnexConnection(connConfig);
 ```
 
 ### SQLite

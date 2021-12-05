@@ -5,11 +5,11 @@ order: 60
 ### Start from a project configuration
 No need to specify a project instance. One will be automatically created based on the provided project options.
 ```js
-const { KnexStorage, PuppeteerClient, Scraper} = require('@get-set-fetch/scraper');
+const { KnexConnection, PuppeteerClient, Scraper} = require('@get-set-fetch/scraper');
 
-const storage = new KnexStorage();
+const conn = new KnexConnection();
 const client = new PuppeteerClient();
-const scraper = new Scraper(storage, client);
+const scraper = new Scraper(conn, client);
 
 scraper.scrape({
   name: 'language-list',
@@ -45,11 +45,11 @@ scraper.scrape({
 A project hash represents a zlib archive of a project configuration encoded as base64. To minimize size a preset deflate dictionary is used.
 
 ```js
-const { KnexStorage, PuppeteerClient, Scraper, encode, decode } = require('@get-set-fetch/scraper');
+const { KnexConnection, PuppeteerClient, Scraper, encode, decode } = require('@get-set-fetch/scraper');
 
-const storage = new KnexStorage();
+const conn = new KnexConnection();
 const client = new PuppeteerClient();
-const scraper = new Scraper(storage, client);
+const scraper = new Scraper(conn, client);
 
 const projectHash = 'ePnXQdMJrZNNDoMgEIWvQrqSNNWm3bnoCXoHMpYRiYBGsE1v30FDf+JCF12QwFu8N5n38TYz4NQICq/ahy2EruH4Q8Kn0OOSmW3gLmml7gzmFgNICMD2rKcziw/d6unGgixdaA63RhuZnTi7MChr8gyzRFHpR6QF7OKE/0g78y933yO0hA7LLAFHXfK4/pWu0E3ePUoNeTeoIr6K2JDoapEG9qJ6CjfaCocoO2rpjiIFxpgXe3Oswg==';
 
@@ -64,10 +64,14 @@ scraper.scrape(projectHash);
 A new project is defined with plugin options overriding default ones from the [browser-static-content](pipelines.html#pipeline-browser-static-content) pipeline.
 
 ```js
-const { KnexStorage, pipelines, mergePluginOpts, PuppeteerClient, Scraper } = require('@get-set-fetch/scraper');
+const { 
+  ConnectionManager, KnexConnection, pipelines, mergePluginOpts, PuppeteerClient, Scraper 
+} = require('@get-set-fetch/scraper');
 
-const storage = new KnexStorage();
-const { Project } = await storage.connect();
+const connMng = new ConnectionManager(new KnexConnection());
+await connMng.connect();
+Project = await connMng.getProject();
+
 const project = new Project({
   name: 'projA.com',
 
@@ -121,12 +125,13 @@ If a project has unscraped resources, just re-start the scrape process. Already 
 You can retrieve an existing project by name or id.
 
 ```js
-const { KnexStorage, PuppeteerClient, Scraper } = require('@get-set-fetch/scraper');
+const { ConnectionManager, KnexConnection, PuppeteerClient, Scraper } = require('@get-set-fetch/scraper');
 
-const storage = new KnexStorage();
-const { Project } = await storage.connect();
+const connMng = new ConnectionManager(new KnexConnection());
+await connMng.connect();
+Project = await connMng.getProject();
+
 const project = await Project.get('projectName');
-
 const client = new PuppeteerClient();
 
 const scraper = new Scraper(storage, client);
