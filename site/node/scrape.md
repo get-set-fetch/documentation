@@ -68,7 +68,8 @@ const {
   ConnectionManager, KnexConnection, pipelines, mergePluginOpts, PuppeteerClient, Scraper 
 } = require('@get-set-fetch/scraper');
 
-const connMng = new ConnectionManager(new KnexConnection());
+const conn = new KnexConnection();
+const connMng = new ConnectionManager(conn);
 await connMng.connect();
 Project = await connMng.getProject();
 
@@ -97,7 +98,7 @@ await project.batchInsertResources([
 
 const client = new PuppeteerClient();
 
-const scraper = new Scraper(storage, client);
+const scraper = new Scraper(conn, client);
 scraper.scrape(project);
 ```
 
@@ -127,14 +128,15 @@ You can retrieve an existing project by name or id.
 ```js
 const { ConnectionManager, KnexConnection, PuppeteerClient, Scraper } = require('@get-set-fetch/scraper');
 
-const connMng = new ConnectionManager(new KnexConnection());
+const conn = new KnexConnection();
+const connMng = new ConnectionManager(conn);
 await connMng.connect();
 Project = await connMng.getProject();
 
 const project = await Project.get('projectName');
 const client = new PuppeteerClient();
 
-const scraper = new Scraper(storage, client);
+const scraper = new Scraper(conn, client);
 scraper.scrape(project);
 ```
 
