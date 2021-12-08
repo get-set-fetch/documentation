@@ -1,5 +1,5 @@
 ---
-title: "How to Generate a Sitemap"
+title: "How to generate a sitemap"
 tags: "beginner"
 date: "2021-09-27"
 ---
@@ -121,7 +121,7 @@ export default class SitemapExporter extends Exporter {
 }
 ```
 
-### Start scraping
+### Start Scraping
 Putting it all together:
 ```ts
 import { Scraper, ScrapeEvent, Project } from '@get-set-fetch/scraper';
