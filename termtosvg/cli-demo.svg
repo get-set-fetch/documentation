@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 720 342" width="720" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="90" rows="20"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    
+            :root {
+                --animation-duration: 26000ms;
+            }
+
+            @keyframes roll {
+                0.000%{transform:translateY(0px)}
+3.308%{transform:translateY(-374px)}
+4.065%{transform:translateY(-748px)}
+4.350%{transform:translateY(-1122px)}
+5.327%{transform:translateY(-1496px)}
+5.985%{transform:translateY(-1870px)}
+6.215%{transform:translateY(-2244px)}
+6.388%{transform:translateY(-2618px)}
+6.858%{transform:translateY(-2992px)}
+7.273%{transform:translateY(-3366px)}
+7.923%{transform:translateY(-3740px)}
+8.354%{transform:translateY(-4114px)}
+8.612%{transform:translateY(-4488px)}
+8.938%{transform:translateY(-4862px)}
+9.762%{transform:translateY(-5236px)}
+9.996%{transform:translateY(-5610px)}
+10.892%{transform:translateY(-5984px)}
+11.477%{transform:translateY(-6358px)}
+23.931%{transform:translateY(-6732px)}
+32.565%{transform:translateY(-7106px)}
+39.473%{transform:translateY(-7480px)}
+48.431%{transform:translateY(-7854px)}
+48.654%{transform:translateY(-8228px)}
+48.658%{transform:translateY(-8602px)}
+48.696%{transform:translateY(-8976px)}
+48.735%{transform:translateY(-9350px)}
+50.092%{transform:translateY(-9724px)}
+53.962%{transform:translateY(-10098px)}
+53.977%{transform:translateY(-10472px)}
+53.985%{transform:translateY(-10846px)}
+96.154%{transform:translateY(-11220px)}
+100.000%{transform:translateY(-11220px)}
+            }
+
+            #screen_view {
+                animation-duration: 26000ms;
+                animation-iteration-count:infinite;
+                animation-name:roll;
+                animation-timing-function: steps(1,end);
+                animation-fill-mode: forwards;
+            }
+        ]]></style>
+        <style type="text/css" id="user-style">
+            /* 
+            based on Solarized light color theme (http://ethanschoonover.com/solarized)
+            expanded styles are the ones overwritten
+            */
+            .foreground {
+                fill: #4a4a4a;
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 13px;
+            }
+            .background {
+                fill: #ffffff;
+            }
+            .color0 {fill: #fdf6e3;}
+            .color1 {fill: #dc322f;}
+            .color2 {
+                fill: green;
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 13px;
+            }
+            .color3 {fill: #b58900;}
+            .color4 {fill: #268bd2;}
+            .color5 {fill: #6c71c4;}
+            .color6 {
+                fill: #485fc7;
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 13px;
+            }
+            .color7 {fill: #586e75;}
+            .color8 {fill: #839496;}
+            .color9 {fill: #cb4b16;}
+            .color10 {fill: #eee8d5;}
+            .color11 {fill: #93a1a1;}
+            .color12 {fill: #657b83;}
+            .color13 {fill: #073642;}
+            .color14 {fill: #d33682;}
+            .color15 {fill: #002b36;}
+        </style>
+    </defs>
+    <svg id="screen" width="720" height="340" viewBox="0 0 720 340" preserveAspectRatio="xMidYMin slice"><rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="16" class="foreground">$ </text><text x="16" textLength="8" class="background"> </text></g><g id="g2"><text x="0" textLength="24" class="foreground">$ n</text><text x="24" textLength="8" class="background"> </text></g><g id="g3"><text x="0" textLength="32" class="foreground">$ np</text><text x="32" textLength="8" class="background"> </text></g><g id="g4"><text x="0" textLength="40" class="foreground">$ npm</text><text x="40" textLength="8" class="background"> </text></g><g id="g5"><text x="0" textLength="48" class="foreground">$ npm </text><text x="48" textLength="8" class="background"> </text></g><g id="g6"><text x="0" textLength="56" class="foreground">$ npm r</text><text x="56" textLength="8" class="background"> </text></g><g id="g7"><text x="0" textLength="64" class="foreground">$ npm ru</text><text x="64" textLength="8" class="background"> </text></g><g id="g8"><text x="0" textLength="72" class="foreground">$ npm run</text><text x="72" textLength="8" class="background"> </text></g><g id="g9"><text x="0" textLength="80" class="foreground">$ npm run </text><text x="80" textLength="8" class="background"> </text></g><g id="g10"><text x="0" textLength="88" class="foreground">$ npm run e</text><text x="88" textLength="8" class="background"> </text></g><g id="g11"><text x="0" textLength="96" class="foreground">$ npm run ex</text><text x="96" textLength="8" class="background"> </text></g><g id="g12"><text x="0" textLength="104" class="foreground">$ npm run exa</text><text x="104" textLength="8" class="background"> </text></g><g id="g13"><text x="0" textLength="112" class="foreground">$ npm run exam</text><text x="112" textLength="8" class="background"> </text></g><g id="g14"><text x="0" textLength="120" class="foreground">$ npm run examp</text><text x="120" textLength="8" class="background"> </text></g><g id="g15"><text x="0" textLength="128" class="foreground">$ npm run exampl</text><text x="128" textLength="8" class="background"> </text></g><g id="g16"><text x="0" textLength="136" class="foreground">$ npm run example</text><text x="136" textLength="8" class="background"> </text></g><g id="g17"><text x="0" textLength="136" class="foreground">$ npm run example</text></g><g id="g18"><text x="0" textLength="8" class="background"> </text></g><g id="g19"><text x="0" textLength="424" class="foreground">&gt; @get-set-fetch/scraper@0.10.0 example /home/scraper</text></g><g id="g20"><text x="0" textLength="376" class="foreground">&gt; ts-node examples/tabular-data/tabular-data.ts</text></g><g id="g21"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="376" class="color6">PluginStore - Registered plugin BaseFetchPlugin</text></g><g id="g22"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="400" class="color6">PluginStore - Registered plugin BrowserFetchPlugin</text></g><g id="g23"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="424" class="color6">PluginStore - Registered plugin InsertResourcesPlugin</text></g><g id="g24"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="376" class="color6">PluginStore - Registered plugin NodeFetchPlugin</text></g><g id="g25"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="416" class="color6">PluginStore - Registered plugin UpsertResourcePlugin</text></g><g id="g26"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="424" class="color6">PluginStore - Bundled plugin ExtractHtmlContentPlugin</text></g><g id="g27"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="448" class="color6">PluginStore - Registered plugin ExtractHtmlContentPlugin</text></g><g id="g28"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="368" class="color6">PluginStore - Bundled plugin ExtractUrlsPlugin</text></g><g id="g29"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="392" class="color6">PluginStore - Registered plugin ExtractUrlsPlugin</text></g><g id="g30"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="328" class="color6">PluginStore - Bundled plugin ScrollPlugin</text></g><g id="g31"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="352" class="color6">PluginStore - Registered plugin ScrollPlugin</text></g><g id="g32"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="400" class="color6">Scraper - PluginStore initialized, 8 plugins found</text></g><g id="g33"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="216" class="color6">Scraper - Storage connected</text></g><g id="g34"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="320" class="color6">Scraper - New project LanguageList saved</text></g><g id="g35"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="144" class="color6">Queue - add 1 urls</text></g><g id="g36"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="552" class="color6">Scraper - Checking for available to-be-scraped resources every 500 ms</text></g><g id="g37"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="536" class="color6">Scraper - Started scraping a new resource from project LanguageList</text></g><g id="g38"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="672" class="color6">Scraper - Resource https://en.wikipedia.org/wiki/List_of_languages_by_number_of_nati</text></g><g id="g39"><text x="0" textLength="256" class="color6">ve_speakers successfully scraped</text></g><g id="g40"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="384" class="color6">Scraper - Project LanguageList scraping complete</text></g><g id="g41"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="488" class="color6">CsvExporter - Exporting under /home/scraper/languages.csv ...</text></g><g id="g42"><text x="0" textLength="32" class="color2">INFO</text><text x="32" textLength="16" class="foreground">: </text><text x="48" textLength="528" class="color6">CsvExporter - Exporting under /home/scraper/languages.csv ... done</text></g></defs><g id="screen_view"><g><rect x="16" y="0" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="0"/></g><g><rect x="24" y="374" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="374"/></g><g><rect x="32" y="748" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="748"/></g><g><rect x="40" y="1122" width="8" height="17" class="foreground"/><use xlink:href="#g4" y="1122"/></g><g><rect x="48" y="1496" width="8" height="17" class="foreground"/><use xlink:href="#g5" y="1496"/></g><g><rect x="56" y="1870" width="8" height="17" class="foreground"/><use xlink:href="#g6" y="1870"/></g><g><rect x="64" y="2244" width="8" height="17" class="foreground"/><use xlink:href="#g7" y="2244"/></g><g><rect x="72" y="2618" width="8" height="17" class="foreground"/><use xlink:href="#g8" y="2618"/></g><g><rect x="80" y="2992" width="8" height="17" class="foreground"/><use xlink:href="#g9" y="2992"/></g><g><rect x="88" y="3366" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="3366"/></g><g><rect x="96" y="3740" width="8" height="17" class="foreground"/><use xlink:href="#g11" y="3740"/></g><g><rect x="104" y="4114" width="8" height="17" class="foreground"/><use xlink:href="#g12" y="4114"/></g><g><rect x="112" y="4488" width="8" height="17" class="foreground"/><use xlink:href="#g13" y="4488"/></g><g><rect x="120" y="4862" width="8" height="17" class="foreground"/><use xlink:href="#g14" y="4862"/></g><g><rect x="128" y="5236" width="8" height="17" class="foreground"/><use xlink:href="#g15" y="5236"/></g><g><rect x="136" y="5610" width="8" height="17" class="foreground"/><use xlink:href="#g16" y="5610"/></g><g><use xlink:href="#g17" y="5984"/><rect x="0" y="6001" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="6001"/></g><g><use xlink:href="#g17" y="6358"/><use xlink:href="#g19" y="6392"/><use xlink:href="#g20" y="6409"/><rect x="0" y="6443" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="6443"/></g><g><use xlink:href="#g17" y="6732"/><use xlink:href="#g19" y="6766"/><use xlink:href="#g20" y="6783"/><use xlink:href="#g21" y="6817"/><rect x="0" y="6834" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="6834"/></g><g><use xlink:href="#g17" y="7106"/><use xlink:href="#g19" y="7140"/><use xlink:href="#g20" y="7157"/><use xlink:href="#g21" y="7191"/><use xlink:href="#g22" y="7208"/><use xlink:href="#g23" y="7225"/><use xlink:href="#g24" y="7242"/><use xlink:href="#g25" y="7259"/><rect x="0" y="7276" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="7276"/></g><g><use xlink:href="#g17" y="7480"/><use xlink:href="#g19" y="7514"/><use xlink:href="#g20" y="7531"/><use xlink:href="#g21" y="7565"/><use xlink:href="#g22" y="7582"/><use xlink:href="#g23" y="7599"/><use xlink:href="#g24" y="7616"/><use xlink:href="#g25" y="7633"/><use xlink:href="#g26" y="7650"/><rect x="0" y="7667" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="7667"/></g><g><use xlink:href="#g17" y="7854"/><use xlink:href="#g19" y="7888"/><use xlink:href="#g20" y="7905"/><use xlink:href="#g21" y="7939"/><use xlink:href="#g22" y="7956"/><use xlink:href="#g23" y="7973"/><use xlink:href="#g24" y="7990"/><use xlink:href="#g25" y="8007"/><use xlink:href="#g26" y="8024"/><use xlink:href="#g27" y="8041"/><use xlink:href="#g28" y="8058"/><use xlink:href="#g29" y="8075"/><use xlink:href="#g30" y="8092"/><use xlink:href="#g31" y="8109"/><use xlink:href="#g32" y="8126"/><use xlink:href="#g33" y="8143"/><rect x="0" y="8160" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="8160"/></g><g><use xlink:href="#g17" y="8228"/><use xlink:href="#g19" y="8262"/><use xlink:href="#g20" y="8279"/><use xlink:href="#g21" y="8313"/><use xlink:href="#g22" y="8330"/><use xlink:href="#g23" y="8347"/><use xlink:href="#g24" y="8364"/><use xlink:href="#g25" y="8381"/><use xlink:href="#g26" y="8398"/><use xlink:href="#g27" y="8415"/><use xlink:href="#g28" y="8432"/><use xlink:href="#g29" y="8449"/><use xlink:href="#g30" y="8466"/><use xlink:href="#g31" y="8483"/><use xlink:href="#g32" y="8500"/><use xlink:href="#g33" y="8517"/><use xlink:href="#g34" y="8534"/><rect x="0" y="8551" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="8551"/></g><g><use xlink:href="#g19" y="8619"/><use xlink:href="#g20" y="8636"/><use xlink:href="#g21" y="8670"/><use xlink:href="#g22" y="8687"/><use xlink:href="#g23" y="8704"/><use xlink:href="#g24" y="8721"/><use xlink:href="#g25" y="8738"/><use xlink:href="#g26" y="8755"/><use xlink:href="#g27" y="8772"/><use xlink:href="#g28" y="8789"/><use xlink:href="#g29" y="8806"/><use xlink:href="#g30" y="8823"/><use xlink:href="#g31" y="8840"/><use xlink:href="#g32" y="8857"/><use xlink:href="#g33" y="8874"/><use xlink:href="#g34" y="8891"/><use xlink:href="#g35" y="8908"/><rect x="0" y="8925" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="8925"/></g><g><use xlink:href="#g19" y="8976"/><use xlink:href="#g20" y="8993"/><use xlink:href="#g21" y="9027"/><use xlink:href="#g22" y="9044"/><use xlink:href="#g23" y="9061"/><use xlink:href="#g24" y="9078"/><use xlink:href="#g25" y="9095"/><use xlink:href="#g26" y="9112"/><use xlink:href="#g27" y="9129"/><use xlink:href="#g28" y="9146"/><use xlink:href="#g29" y="9163"/><use xlink:href="#g30" y="9180"/><use xlink:href="#g31" y="9197"/><use xlink:href="#g32" y="9214"/><use xlink:href="#g33" y="9231"/><use xlink:href="#g34" y="9248"/><use xlink:href="#g35" y="9265"/><use xlink:href="#g36" y="9282"/><rect x="0" y="9299" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="9299"/></g><g><use xlink:href="#g20" y="9350"/><use xlink:href="#g21" y="9384"/><use xlink:href="#g22" y="9401"/><use xlink:href="#g23" y="9418"/><use xlink:href="#g24" y="9435"/><use xlink:href="#g25" y="9452"/><use xlink:href="#g26" y="9469"/><use xlink:href="#g27" y="9486"/><use xlink:href="#g28" y="9503"/><use xlink:href="#g29" y="9520"/><use xlink:href="#g30" y="9537"/><use xlink:href="#g31" y="9554"/><use xlink:href="#g32" y="9571"/><use xlink:href="#g33" y="9588"/><use xlink:href="#g34" y="9605"/><use xlink:href="#g35" y="9622"/><use xlink:href="#g36" y="9639"/><use xlink:href="#g37" y="9656"/><rect x="0" y="9673" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="9673"/></g><g><use xlink:href="#g21" y="9724"/><use xlink:href="#g22" y="9741"/><use xlink:href="#g23" y="9758"/><use xlink:href="#g24" y="9775"/><use xlink:href="#g25" y="9792"/><use xlink:href="#g26" y="9809"/><use xlink:href="#g27" y="9826"/><use xlink:href="#g28" y="9843"/><use xlink:href="#g29" y="9860"/><use xlink:href="#g30" y="9877"/><use xlink:href="#g31" y="9894"/><use xlink:href="#g32" y="9911"/><use xlink:href="#g33" y="9928"/><use xlink:href="#g34" y="9945"/><use xlink:href="#g35" y="9962"/><use xlink:href="#g36" y="9979"/><use xlink:href="#g37" y="9996"/><use xlink:href="#g38" y="10013"/><use xlink:href="#g39" y="10030"/><rect x="0" y="10047" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="10047"/></g><g><use xlink:href="#g22" y="10098"/><use xlink:href="#g23" y="10115"/><use xlink:href="#g24" y="10132"/><use xlink:href="#g25" y="10149"/><use xlink:href="#g26" y="10166"/><use xlink:href="#g27" y="10183"/><use xlink:href="#g28" y="10200"/><use xlink:href="#g29" y="10217"/><use xlink:href="#g30" y="10234"/><use xlink:href="#g31" y="10251"/><use xlink:href="#g32" y="10268"/><use xlink:href="#g33" y="10285"/><use xlink:href="#g34" y="10302"/><use xlink:href="#g35" y="10319"/><use xlink:href="#g36" y="10336"/><use xlink:href="#g37" y="10353"/><use xlink:href="#g38" y="10370"/><use xlink:href="#g39" y="10387"/><use xlink:href="#g40" y="10404"/><rect x="0" y="10421" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="10421"/></g><g><use xlink:href="#g23" y="10472"/><use xlink:href="#g24" y="10489"/><use xlink:href="#g25" y="10506"/><use xlink:href="#g26" y="10523"/><use xlink:href="#g27" y="10540"/><use xlink:href="#g28" y="10557"/><use xlink:href="#g29" y="10574"/><use xlink:href="#g30" y="10591"/><use xlink:href="#g31" y="10608"/><use xlink:href="#g32" y="10625"/><use xlink:href="#g33" y="10642"/><use xlink:href="#g34" y="10659"/><use xlink:href="#g35" y="10676"/><use xlink:href="#g36" y="10693"/><use xlink:href="#g37" y="10710"/><use xlink:href="#g38" y="10727"/><use xlink:href="#g39" y="10744"/><use xlink:href="#g40" y="10761"/><use xlink:href="#g41" y="10778"/><rect x="0" y="10795" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="10795"/></g><g><use xlink:href="#g24" y="10846"/><use xlink:href="#g25" y="10863"/><use xlink:href="#g26" y="10880"/><use xlink:href="#g27" y="10897"/><use xlink:href="#g28" y="10914"/><use xlink:href="#g29" y="10931"/><use xlink:href="#g30" y="10948"/><use xlink:href="#g31" y="10965"/><use xlink:href="#g32" y="10982"/><use xlink:href="#g33" y="10999"/><use xlink:href="#g34" y="11016"/><use xlink:href="#g35" y="11033"/><use xlink:href="#g36" y="11050"/><use xlink:href="#g37" y="11067"/><use xlink:href="#g38" y="11084"/><use xlink:href="#g39" y="11101"/><use xlink:href="#g40" y="11118"/><use xlink:href="#g41" y="11135"/><use xlink:href="#g42" y="11152"/><rect x="0" y="11169" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="11169"/></g><g><use xlink:href="#g24" y="11220"/><use xlink:href="#g25" y="11237"/><use xlink:href="#g26" y="11254"/><use xlink:href="#g27" y="11271"/><use xlink:href="#g28" y="11288"/><use xlink:href="#g29" y="11305"/><use xlink:href="#g30" y="11322"/><use xlink:href="#g31" y="11339"/><use xlink:href="#g32" y="11356"/><use xlink:href="#g33" y="11373"/><use xlink:href="#g34" y="11390"/><use xlink:href="#g35" y="11407"/><use xlink:href="#g36" y="11424"/><use xlink:href="#g37" y="11441"/><use xlink:href="#g38" y="11458"/><use xlink:href="#g39" y="11475"/><use xlink:href="#g40" y="11492"/><use xlink:href="#g41" y="11509"/><use xlink:href="#g42" y="11526"/><rect x="0" y="11543" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="11543"/></g></g></svg>
+</svg>
