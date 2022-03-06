@@ -1,5 +1,11 @@
-#python env
+# python env
 termtosvg/.venv
+
+# log parsing
+analytics/*
+!analytics/ansible
+analytics/ansible/*
+!analytics/ansible/fetch-nginx-logs.yml
 
 # notes
 *.txt
