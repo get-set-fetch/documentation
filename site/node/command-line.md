@@ -1,5 +1,6 @@
 ---
-title: Command Line
+title: Command Line Scraping
+menu_title: Command Line
 order: 110
 ---
 Command line usage covers two main use cases: create and scrape a new project, scrape existing projects. Both use cases make use of a configuration file containing storage, log, scrape and concurrency settings. 
@@ -52,8 +53,9 @@ gsfscrape --config scrape-config.json \
 --export project.csv
 ```
 
-### Scrape existing projects
-After there are no more resources to scrape, retry every 60 seconds.
+### Continuous scraping
+Scrape existing resources. After there are no more resources to scrape, retry every 60 seconds. \
+Usefull when more than one scraper instance is used.
 
 ```bash
 gsfscrape --config scrape-config.json \

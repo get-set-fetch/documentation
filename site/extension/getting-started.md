@@ -1,8 +1,9 @@
 ---
-title: Getting Started
+title: Web Scraper Extension
+menu_title: Getting Started
 order: 1
 ---
-**@get-set-fetch/extension** is an open source browser extension scraper with csv and zip export capabilities.
+**@get-set-fetch/extension** is an open source web scraper available as a cross-browser (chrome, firefox, edge) extension with csv and zip export capabilities.
 
 With a modular architecture, the extension provides a series of scraping scenarios with predefined default values for fast, minimal configuration scraping. All scraped resources are saved in the IndexedDB browser database.
 

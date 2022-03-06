@@ -1,15 +1,18 @@
 ---
-title: Getting Started
+title: Get-Set, Fetch! Nodejs Web Scraper
+menu_title: Getting Started
 order: 10
 node: true
 ---
-**@get-set-fetch/scraper** is a plugin based, batteries included, open source nodejs web scraper. It scrapes, stores and exports data. 
+[@get-set-fetch/scraper](https://github.com/get-set-fetch/scraper) is a plugin based, batteries included, open source nodejs web scraper. It scrapes, stores and exports data. 
 An ordered list of plugins (default or custom defined) is executed against each to be scraped web resource.
 
 Supports multiple storage options: SQLite, MySQL, PostgreSQL.
 Supports multiple browser or dom-like clients: Puppeteer, Playwright, Cheerio, JSdom. 
 
-You can use it from your own javascript/typescript code, via [command line](node/command-line.html) or [docker container](node/docker.html).
+You can use it in your own javascript/typescript code, from the [command line](node/command-line.html), with [docker](node/docker.html) or in [cloud](node/cloud.html).
+
+![](/assets/img/cli-demo.svg)
 
 ### Install the scraper
 ```

@@ -1,5 +1,6 @@
 ---
-title: Clients
+title: Headless Scraping with Browser or DOM-Like Clients
+menu_title: Clients
 order: 30
 ---
 ## Browser Clients

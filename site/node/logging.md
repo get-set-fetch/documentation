@@ -1,5 +1,6 @@
 ---
-title: Logging
+title: Console and File Logging
+menu_title: Logging
 order: 80
 ---
 Logging is done via a wrapper over pino supporting all its log levels. There is a main logger available via `getLogger()` writing by default to console on warning level or above. Individual modules can acquire their own child logger overriding  some of the main logger settings (like level) but not the write destination.

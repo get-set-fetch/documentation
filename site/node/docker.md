@@ -1,5 +1,6 @@
 ---
-title: Docker
+title: Docker Scraping
+menu_title: Docker
 order: 120
 ---
 ## Build
@@ -46,7 +47,8 @@ docker build \
 All examples contain config, log, sqlite, csv files under `/home/gsfuser/scraper/data` container path mounted from the host for easy access to logs and exported scraped content. Remaining arguments represent [command line arguments](command-line.html). All files are available in the [docker](https://github.com/get-set-fetch/scraper/tree/main/docker) repo directory.
 
 
-### Log, scrape and export data using sqlite as storage and cheerio as dom client
+### SQLite and Cheerio
+Log, scrape and export data using sqlite as storage and cheerio as dom client.
 
 config-sqlite-cheerio.json
 ```json
@@ -101,8 +103,8 @@ docker run \
 --export data/export.csv
 ```
 
-### Log, scrape and export data using sqlite as storage and puppeteer as browser client
-
+### SQLite and Puppeteer
+Log, scrape and export data using sqlite as storage and puppeteer as browser client. \
 Use either `--security-opt seccomp=unconfined` or `--security-opt seccomp=data/chromium-security-profile.json` ([source blog](https://blog.jessfraz.com/post/how-to-use-new-docker-seccomp-profiles/)) to allow Chromium syscalls.
 
 config-sqlite-puppeteer.json
@@ -167,8 +169,9 @@ docker run \
 --export data/export.csv
 ```
 
-### Log, scrape and export data using postgresql as storage and puppeteer as browser client
-This starts the scraper as a docker-compose service. \\
+### PostgreSQL and Puppeteer
+Log, scrape and export data using postgresql as storage and puppeteer as browser client. \
+This starts the scraper as a docker-compose service. \
 Remember to build the corresponding docker image `--build-arg STORAGE=pg --build-arg BROWSER_CLIENT=puppeteer` first :)
 
 config-pg-puppeteer.json

@@ -1,5 +1,6 @@
 ---
-title: Export
+title: Export Scraped Content to CSV, Zip
+menu_title: Export
 order: 70
 ---
 Scraped content is stored at database level in resource entries under a project. See [Storage](storage.html) for more info.

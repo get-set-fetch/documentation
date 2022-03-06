@@ -1,9 +1,10 @@
 ---
-title: Plugins
+title: Typescript / Javascript Scraping Plugins
+menu_title: Plugins
 order: 50
 ---
 ## PluginStore 
-Prior to scraping, available plugins are registered into a plugin store via their filepaths. Each plugin is a javascript module with a default export declaration containing a class extending `Plugin`. Class `constructor.name` is used to uniquely identify a plugin. Each plugin together with its dependencies is bundled as a single module to be run either in a browser or node.js environment.
+Prior to scraping, available plugins are registered into a plugin store via their filepaths. Each plugin is a javascript module with a default export declaration containing a class extending `Plugin`. Class `constructor.name` is used to uniquely identify a plugin. Each plugin together with its dependencies is bundled as a single module to be run either in a browser or nodejs environment.
 
 Specifying a filePath will register a single plugin. Specifying a dirPath will register all plugins stored under that directory. Paths are absolute.
 ```js

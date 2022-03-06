@@ -1,5 +1,6 @@
 ---
-title: Pipelines
+title: Scraping Pipelines - Load Web Pages, Extract New URLs, Extract Content, Save to Database
+menu_title: Pipelines
 order: 40
 ---
 Each pipeline contains a series of plugins with predefined values for all plugin options. A project configuration extends a pipeline by replacing/adding new plugins or overriding the predefined plugin options.

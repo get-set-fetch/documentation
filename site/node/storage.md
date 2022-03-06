@@ -1,5 +1,6 @@
 ---
-title: Storage
+title: Scraping Content To Database
+menu_title: Storage
 order: 20
 ---
 Each scraped URL (web page, image, API endpoint, ...) represents a `Resource`. Binary content is stored under `resource.data` while text based content is stored under `resource.content`. Resources sharing the same project configuration and discovered from the same initial URL(s) are grouped in a `Project`. 
@@ -16,7 +17,7 @@ const { KnexConnection } = require('@get-set-fetch/scraper');
 const conn = new KnexConnection(connConfig);
 ```
 
-### SQLite
+## SQLite
 Default storage option if none provided consuming the least amount of resources. Requires knex and sqlite driver.
 ```
 $ npm install knex sqlite3
@@ -33,7 +34,7 @@ SQLite connection example.
 }
 ```
 
-### MySQL
+## MySQL
 Requires knex and mysql driver.
 ```
 $ npm install knex mysql
@@ -54,7 +55,7 @@ MySQL connection example.
 }
 ```
 
-### PostgreSQL
+## PostgreSQL
 Requires knex and postgresql driver.
 ```
 $ npm install knex pg

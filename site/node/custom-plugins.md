@@ -1,8 +1,9 @@
 ---
-title: Custom Plugins
+title: Custom Typescript / Javascript Plugins
+menu_title: Custom Plugins
 order: 100
 ---
-At minimum a plugin needs to define two functions: `test` and `apply`. The former checks if the plugin should be invoked, the latter invokes it. Both functions can be executed in either node.js or browser environments.
+At minimum a plugin needs to define two functions: `test` and `apply`. The former checks if the plugin should be invoked, the latter invokes it. Both functions can be executed in either nodejs or browser environments.
 
 A plugin is executed in browser if it defines a `domRead` or `domWrite` option set to `true`. When registering such a plugin via `PluginStore.addEntry` a bundle is created containing all its dependencies, including node_modules ones. Try to have such dependencies in ECMAScript module format as this enables tree shaking keeping the bundle size to a minimum. Other module formats like CommonJS are non-deterministic at build time severely limiting tree shaking capabilities. The entire module may be added to the plugin bundle even though you're only using a part of it. Importing typescript plugins via command line is not supported.
 

@@ -12,8 +12,13 @@
     {% for menu_page in sorted_menu_pages %}
     <li>
         {% if menu_page.order != 0 %}
-        <a href="{{ menu_page.url }}" {% if menu_page.url==page.url %} class="is-active" {% endif %}>
-            {{menu_page.title}}
+        <a href="{{ menu_page.url }}" {% if menu_page.url==page.url %} class="primary is-active" {%else%}
+            class="primary" {% endif %}>
+            {% if menu_page.menu_title %}
+            {{ menu_page.menu_title }}
+            {% else %}
+            {{ menu_page.title }}
+            {% endif %}
         </a>
         {% endif %}
     </li>

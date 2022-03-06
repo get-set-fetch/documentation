@@ -1,5 +1,6 @@
 ---
-title: Examples
+title: Static and Dynamic Page Scraping Examples
+menu_title: Examples
 order: 2
 ---
 ### Single Static Page Scraping
