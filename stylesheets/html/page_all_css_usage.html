@@ -48,21 +48,18 @@
 </head>
 
 <body>
-    <div class="section hero is-justify-content-start pt-3">
-
-
-
+    <div class="container pt-3">
 
         <div class="columns">
             <div class="column is-narrow is-hidden-touch has-text-right">
                 <img src="gsf-logo.png" width="159" height="63">
                 <aside class="menu">
                     <ul class="menu-list">
-                        <li><a class="is-active">Install Extension</a></li>
-                        <li><a>Getting Started</a></li>
-                        <li><a>Examples</a></li>
-                        <li><a>Extensibility</a></li>
-                        <li><a>ChangeLog</a></li>
+                        <li><a class="primary is-active">Install Extension</a></li>
+                        <li><a class="primary">Getting Started</a></li>
+                        <li><a class="primary">Examples</a></li>
+                        <li><a class="primary">Extensibility</a></li>
+                        <li><a class="primary">ChangeLog</a></li>
                     </ul>
                 </aside>
             </div>
@@ -90,7 +87,7 @@
                             <!-- single level menu for desktop -->
                             <div class="navbar-start is-hidden-touch">
                                 <a class="navbar-item is-active">
-                                    Node.js Package
+                                    Nodejs Package
                                 </a>
                                 <a class="navbar-item">
                                     Browser Extension
@@ -175,6 +172,25 @@
                                     </div>
                                 </div>
 
+                                <div class="language-js highlighter-rouge">
+                                    <div class="highlight">
+                                        <pre class="highlight">
+                                            <code>
+                                                <span class="kd">const</span> <span class="p">{</span> <span class="nx">ScrapeEvent</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@get-set-fetch/scraper</span><span class="dl">'</span><span class="p">);</span>
+
+                                                <span class="nx">scraper</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">ScrapeEvent</span><span class="p">.</span><span class="nx">ProjectScraped</span><span class="p">,</span> <span class="p">(</span><span class="nx">project</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                                                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`project </span><span class="p">${</span><span class="nx">project</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> has been scraped`</span><span class="p">);</span>
+                                                <span class="p">});</span>
+                                                
+                                                <span class="nx">scraper</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">ScrapeEvent</span><span class="p">.</span><span class="nx">ResourceError</span><span class="p">,</span> <span class="p">(</span><span class="nx">project</span><span class="p">,</span> <span class="nx">resource</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                                                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`error scraping resource </span><span class="p">${</span><span class="nx">resource</span><span class="p">.</span><span class="nx">url</span><span class="p">}</span><span class="s2"> from project </span><span class="p">${</span><span class="nx">project</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">: </span><span class="p">${</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+                                                <span class="p">})</span>
+                                            </code>
+                                        </pre>
+
+                                    </div>
+                                </div>
+
                                 <h5>Feedback</h5>
                                 <p class="install-extension">
                                     If you find a bug, please <a
@@ -193,11 +209,21 @@
                 </div>
             </div>
 
+            <div class="column is-narrow is-hidden-second-menu">
+                <aside class="menu">
+                    <p class="toc">On this page</p>
+                    <ul class="menu-list">
+                        <li><a class="secondary is-active">Install Extension</a></li>
+                        <li><a class="secondary">Getting Started</a></li>
+                        <li><a class="secondary">Examples</a></li>
+                        <li><a class="secondary">Extensibility</a></li>
+                        <li><a class="secondary">ChangeLog</a></li>
+                    </ul>
+                </aside>
+            </div>
+
         </div>
-
-
-
-
+    </div>
 </body>
 
 </html>

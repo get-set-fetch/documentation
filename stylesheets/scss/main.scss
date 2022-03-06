@@ -36,10 +36,23 @@ h2 {
     font-size: 1.75rem;
 }
 
-@media screen and (max-width: 1023px) {
-    .section {
-        padding: 0;
+.container {
+    max-width: none;
+}
+
+@media screen and (max-width: 1215px) {
+    .is-hidden-second-menu {
+        display: none !important;
     }
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 .content {
@@ -81,7 +94,17 @@ h2 {
     }
 }
 
-.menu-list a {
+.menu {
+    position: sticky;
+    top: 0;
+
+    p.toc {
+        border-bottom: 1px solid #dee2e6 !important;
+        font-size: 1.2rem;
+    }
+}
+
+ul.menu-list a.primary {
     text-align: right;
     margin-right: 0;
     padding-right: 0.25rem;
@@ -89,6 +112,17 @@ h2 {
     &.is-active {
         font-weight: 700;
         font-size: 1.25rem;
+        text-decoration: underline;
+    }
+}
+
+ul.menu-list a.secondary {
+    text-align: left;
+    margin-right: 0;
+    padding-left: 0.25rem;
+
+    &.is-active {
+        font-weight: 700;
         text-decoration: underline;
     }
 }
