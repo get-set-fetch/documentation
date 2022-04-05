@@ -1,5 +1,5 @@
 ---
-title: "How to generate a sitemap"
+title: "Generate a sitemap"
 tags: "beginner"
 date: "2021-09-27"
 ---
