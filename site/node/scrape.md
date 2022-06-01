@@ -143,12 +143,14 @@ scraper.scrape(project);
 
 ### Scrape events
 List of scrape events with their corresponding callback arguments.
+- `ResourceSelectError`: (project, resource, error) \\
+a scraping error linked to a particular resource selection stops the resource scraping, project scraping continues
 - `ResourceSelected`: (project, resource) \\
 a resource is selected to be scraped, its scrapeInProgress flag is set to true
+- `ResourceScrapeError`: (project, resource, error) \\
+a scraping error linked to a particular resource stops the resource scraping, project scraping continues
 - `ResourceScraped`: (project, resource) \\
 a resource is updated with the scraped content, its scrapeInProgress flag is set to false
-- `ResourceError`: (project, resource, error) \\
-a scraping error linked to a particular resource stops the resource scraping, project scraping continues
 - `ProjectSelected`: (project) \\
 a project is ready for scraping, storage/browser client/plugins have been initialized
 - `ProjectScraped`: (project) \\
@@ -168,7 +170,7 @@ scraper.on(ScrapeEvent.ProjectScraped, (project) => {
   console.log(`project ${project.name} has been scraped`);
 });
 
-scraper.on(ScrapeEvent.ResourceError, (project, resource, err) => {
+scraper.on(ScrapeEvent.ResourceScrapeError, (project, resource, err) => {
   console.log(`error scraping resource ${resource.url} from project ${project.name}: ${err.message}`);
 })
 ```

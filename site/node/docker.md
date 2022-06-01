@@ -83,7 +83,7 @@ config-sqlite-cheerio.json
     ],
     "resources": [
       {
-        "url": "https://www.getsetfetch.org/node/getting-started.html"
+        "url": "https://www.getsetfetch.org/node/docker.html"
       }
     ]
   }

@@ -20,6 +20,14 @@ Uses nodejs `http.request` / `https.request` to fetch html and binary data. Resp
 - `headers`
   - Request headers.
   - default: `{ 'Accept-Encoding': 'br,gzip,deflate' }`
+- `tlsCheck`
+  - Check server certificate, certificate and hostname match.
+  - default: `true`
+- `dnsResolution`
+  - Use "lookup" to take into account local configuration files like /etc/hosts. Use "resolve" to always perform dns queries over the network.
+  - default: `lookup`
+- `connectTimeout`
+- `readTimeout`
 
 ### Browser Fetch Plugin
 Depending on resource type (binary, html), either downloads or opens in the scrape tab the resource URL.
