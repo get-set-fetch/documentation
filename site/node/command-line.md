@@ -21,7 +21,7 @@ Command line usage covers two main use cases: create and scrape a new project, s
 
 When you only need command line, install the package and its peer dependencies globally.
 ```bash
-npm install -g @get-set-fetch/scraper knex sqlite3 cheerio
+npm install -g @get-set-fetch/scraper knex @vscode/sqlite3 cheerio
 ```
 The above uses knex with sqlite3 for storage, cheerio as a dom client.
 

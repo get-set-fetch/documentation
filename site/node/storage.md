@@ -20,7 +20,7 @@ const conn = new KnexConnection(connConfig);
 ## SQLite
 Default storage option if none provided consuming the least amount of resources. Requires knex and sqlite driver.
 ```
-$ npm install knex sqlite3
+$ npm install knex @vscode/sqlite3
 ```
 SQLite connection example.
 ```json

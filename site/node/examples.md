@@ -21,7 +21,7 @@ npm ci
 
 # install storage and browser/dom client peer dependencies
 # may vary depending on example
-npm install knex sqlite3 cheerio
+npm install knex @vscode/sqlite3 cheerio
 
 # make the example subdirectory the current working directory
 cd examples/tabular-data
